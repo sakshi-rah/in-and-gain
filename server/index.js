@@ -2,6 +2,7 @@ import express from "express"
 import mongoose from "mongoose";
 import dotenv, { config } from "dotenv";
 import User from "./models/User.js";
+import FoodItems from "./models/FoodItems.js"
 dotenv.config()
 
 
@@ -96,6 +97,56 @@ app.post('/login', async (req, res) => {
             message: "Invalid email or password",
         })
     }
+})
+
+//create fooditems api
+app.post('/createFoodItems', async (req, res) => {
+    const { title, description, imgUrl, category, price } = req.body;
+
+    const foodItem = new FoodItem({
+        title: title,
+        description: description,
+        imgUrl: imgUrl,
+        category: category,
+        price: price
+    })
+
+    const saveFoodItem = await FoodItem.save();
+
+    res.json({
+        success: true,
+        description: "Food Item created successfully",
+        data: saveFoodItem
+    })
+})
+//search food items api route by category
+app.get('/FoodItemByCategory',async(req,res)=>{
+    const {category} = req.query;
+
+    const foodItems = await FoodItems.find({
+        category: {$regex: category, $options: 'i'}
+    })
+
+    res.json({
+        success:true,
+        description: "Food Items Fatch Successfully",
+        data : foodItems
+    })
+})
+
+//search food items api route by title
+app.get('/FoodItemByTitle',async(req,res)=>{
+    const {title} = req.query;
+
+    const foodItems = await FoodItems.find({
+        title: {$regex: title, $options: 'i'}
+    })
+
+    res.json({
+        success:true,
+        description: "Food Items Fatch Successfully",
+        data : foodItems
+    })
 })
 
 app.listen(PORT, () => {
