@@ -2,7 +2,9 @@ import express from "express"
 import mongoose from "mongoose";
 import dotenv, { config } from "dotenv";
 import User from "./models/User.js";
-import FoodItems from "./models/FoodItems.js"
+import FoodItem from "./models/FoodItem.js"
+import SeatBook from "./models/SeatBook.js";
+import Order from "./models/Order.js";
 dotenv.config()
 
 
@@ -111,7 +113,7 @@ app.post('/createFoodItems', async (req, res) => {
         price: price
     })
 
-    const saveFoodItem = await FoodItem.save();
+    const saveFoodItem = await foodItem.save();
 
     res.json({
         success: true,
@@ -120,35 +122,113 @@ app.post('/createFoodItems', async (req, res) => {
     })
 })
 //search food items api route by category
-app.get('/FoodItemByCategory',async(req,res)=>{
-    const {category} = req.query;
+app.get('/foodItemByCategory', async (req, res) => {
+    const { category } = req.query;
 
-    const foodItems = await FoodItems.find({
-        category: {$regex: category, $options: 'i'}
+    const foodItems = await FoodItem.find({
+        category: { $regex: category, $options: 'i' }
     })
 
     res.json({
-        success:true,
+        success: true,
         description: "Food Items Fatch Successfully",
-        data : foodItems
+        data: foodItems
     })
 })
 
 //search food items api route by title
-app.get('/FoodItemByTitle',async(req,res)=>{
-    const {title} = req.query;
+app.get('/foodItemByTitle', async (req, res) => {
+    const { title } = req.query;
 
-    const foodItems = await FoodItems.find({
-        title: {$regex: title, $options: 'i'}
+    const foodItems = await FoodItem.find({
+        title: { $regex: title, $options: 'i' }
     })
 
     res.json({
-        success:true,
+        success: true,
         description: "Food Items Fatch Successfully",
-        data : foodItems
+        data: foodItems
     })
 })
 
+// seatBook model api of createTable
+app.post('/createTable', async (req, res) => {
+    const { tableNumber } = req.body;
+
+    const existingTable = await SeatBook.findOne({ tableNumber: tableNumber });
+    if (existingTable) {
+        return res.json({
+            success: false,
+            message: "Table already booked"
+        })
+    }
+    const seatBook = new SeatBook({
+        tableNumber: tableNumber,
+        booked: false,
+
+    })
+
+    const savedSeatBook = await seatBook.save();
+
+    res.json({
+        success: true,
+        message: "Table created successfully",
+        data: savedSeatBook
+    })
+})
+
+//booktable api route
+
+app.post('/bookTable', async (req, res) => {
+    const { tableNumber, userId } = req.body;
+
+    const existingTable = await SeatBook.findOne({ tableNumber: tableNumber });
+    if (existingTable && existingTable.booked) {
+        return res.json({
+            success: false,
+            message: "Table already booked"
+        })
+    }
+        if (existingTable) {
+            existingTable.booked = true;
+            existingTable.userId = userId;
+            await existingTable.save();
+        }
+        
+        res.json({
+            success : true,
+            message:"Table booked successfully",
+            data: existingTable
+        })
+   
+})
+
+//unbooktable api route
+app.post('/unBookTable', async (req, res) => {
+    const { tableNumber } = req.body;
+
+    const existingTable = await SeatBook.findOne({ tableNumber: tableNumber });
+    if(existingTable){
+        existingTable.booked= false;
+        existingTable.bookedBy = null;
+        await existingTable.save();
+    }
+    res.json({
+        success: true,
+        message:"Table unbooked successfully",
+        data: existingTable
+    })
+})
+//availabletables api route
+app.get('/availableTables',async(req,res)=>{
+   const availableTables = await SeatBook.find({ booked: false});
+
+   res.json({
+    success: true,
+    message: "Available tables found successfully",
+    data: availableTables
+   })
+})
 app.listen(PORT, () => {
     console.log(`server started running on PORT ${PORT}`);
 })
