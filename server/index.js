@@ -189,18 +189,18 @@ app.post('/bookTable', async (req, res) => {
             message: "Table already booked"
         })
     }
-        if (existingTable) {
-            existingTable.booked = true;
-            existingTable.userId = userId;
-            await existingTable.save();
-        }
-        
-        res.json({
-            success : true,
-            message:"Table booked successfully",
-            data: existingTable
-        })
-   
+    if (existingTable) {
+        existingTable.booked = true;
+        existingTable.userId = userId;
+        await existingTable.save();
+    }
+
+    res.json({
+        success: true,
+        message: "Table booked successfully",
+        data: existingTable
+    })
+
 })
 
 //unbooktable api route
@@ -208,26 +208,73 @@ app.post('/unBookTable', async (req, res) => {
     const { tableNumber } = req.body;
 
     const existingTable = await SeatBook.findOne({ tableNumber: tableNumber });
-    if(existingTable){
-        existingTable.booked= false;
+    if (existingTable) {
+        existingTable.booked = false;
         existingTable.bookedBy = null;
         await existingTable.save();
     }
     res.json({
         success: true,
-        message:"Table unbooked successfully",
+        message: "Table unbooked successfully",
         data: existingTable
     })
 })
 //availabletables api route
-app.get('/availableTables',async(req,res)=>{
-   const availableTables = await SeatBook.find({ booked: false});
+app.get('/availableTables', async (req, res) => {
+    const availableTables = await SeatBook.find({ booked: false });
 
-   res.json({
-    success: true,
-    message: "Available tables found successfully",
-    data: availableTables
-   })
+    res.json({
+        success: true,
+        message: "Available tables found successfully",
+        data: availableTables
+    })
+})
+// orderfooditems api route
+app.post('/orderFoodItems', async (req, res) => {
+    const { userId, tableNumber, items } = req.body;
+
+    const totalOrders = await Order.countDocuments();
+    const orderId = totalOrders + 1;
+
+    const order = new Order({
+        orderId: orderId,
+        userId: userId,
+        tableNumber: tableNumber,
+        items: items
+    })
+
+    const savedOrder = await order.save();
+
+    res.json({
+        success: true,
+        message: "Order placed successfully",
+        data: savedOrder
+    })
+
+})
+
+// order get api route
+app.get('/order', async (req, res) => {
+    const { orderId } = req.query;
+
+    const order = await Order.findOne({ orderId: orderId });
+    res.json({
+        success: true,
+        message: "Order fetched successfully",
+        data: order
+    })
+})
+//ordersby userId api route
+app.get('/ordersByUserId', async (req, res) => {
+    const { userId } = req.body;
+
+    const orders = await Order.find({ userId: userId });
+
+    res.json({
+        success: true,
+        message: "Orders fetched successfully",
+        data: orders
+    })
 })
 app.listen(PORT, () => {
     console.log(`server started running on PORT ${PORT}`);

@@ -1,9 +1,9 @@
-import {Schema , model} from "mongoose";
+import { Schema, model } from "mongoose";
 
 const orderSchema = new Schema({
-    orderId: String,
+    orderId: Number,
     tableNumber: Number,
-    userId:{
+    userId: {
         type: Schema.Types.ObjectId,
         ref: "User"
     },
@@ -16,6 +16,6 @@ const orderSchema = new Schema({
     ]
 })
 
-const Order = model('Order',orderSchema);
+const Order = model('Order', orderSchema);
 
-export default Order;
+export default Order
