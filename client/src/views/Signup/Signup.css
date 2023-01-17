@@ -1,40 +1,67 @@
 /*left side container css */
+
+.signup-heading{
+    color: #E17FA3;
+}
+
+.signup-heading:hover{
+    color: #0066ff;
+}
 .form-container {
-    margin-top: 60px;
+    margin-top: 40px;
     margin-left: 80px;
     width: 500px;
     height: 500px;
-    border: 1px solid black;
 }
-
+.first-container{
+    display: block;
+}
+.profile-pic-container{
+   text-align: center;
+   margin-left: 2px;
+    cursor: pointer;
+}
+.profile-pic{
+    width: 60px;
+    
+}
 .form-input {
-
-    width: 300px;
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.form-input:hover{
+    box-shadow: 0 0 4px 0.5px  #0066ff;
 }
 
 .form-item {
     margin-top: 20px;
-    margin-left: 100px;
+    margin-left: 50px;
     font-size: 20px;
 }
 
 .create-btn {
-    width: 300px;
+    width: 400px;
     height: 40px;
-    margin-left: 100px;
+    margin-left: 50px;
     margin-top: 30px;
     border: none;
-    border-radius: 3px;
+    border-radius: 5px;
     background-color: #E17FA3;
     color: white;
     font-size: 20px;
 }
+.create-btn:hover{
+   color: #0066ff;
+}
 
 /*right side container css */
+
 .right-image {
-    width: 500px;
-    height: 500px;
-    margin-top: 50px;
-    margin-left: 50px;
-    border: 1px solid black;
+    width: 600px;
+    height: 600px;
+    margin-top: 20px;
+    margin-left: 20px;
+    
 }
