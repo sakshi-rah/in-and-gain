@@ -1,3 +1,3 @@
-# In-And-Gain Website
+# Sweet Hub Website
 
 ## This is fully made by MERN Stack.
