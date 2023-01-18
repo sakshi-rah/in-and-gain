@@ -1,9 +1,11 @@
 import React, { useState ,useEffect} from 'react'
 import axios from 'axios'
+import swal from 'sweetalert'
 import "./Login.css"
 import signinImg from "./../../Images/login-page-pic.png"
 import profilePic from "./../../Images/profile-pic.png"
 import { currentUser } from '../../Util/currentUser'
+
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -23,13 +25,24 @@ function Login() {
         })
         console.log(response.data)
         if(response.data.success){
-            alert( response.data.message)
-            localStorage.setItem('currentUser',JSON.stringify(response.data.data))
+            alert( )
+            swal({
+                title: "success",
+                text: response.data.message,
+                icon: "success",
+                button: "Aww yiss!"
+            })
             window.location.href="/"
 
         }
         else{
-            alert('Error:'+ response.data.message)
+            alert()
+            swal({
+                title: "Error",
+                text: response.data.message,
+                icon: "error",
+                button: "Try Again!"
+            })
             setEmail("")
             setPassword("")
             localStorage.removeItem('currentUser')

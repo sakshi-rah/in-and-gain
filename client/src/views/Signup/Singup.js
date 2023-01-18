@@ -1,5 +1,6 @@
 import React ,{useState, useEffect} from 'react'
 import axios from 'axios'
+import swal from 'sweetalert'
 import "./Signup.css"
 import signupImg from "./../../Images/signup-page-pic.png"
 import profilePic from "./../../Images/profile-pic.png"
@@ -18,7 +19,7 @@ function Singup() {
             window.location.href="/"
         }
     },[])
-    
+
     async function signupUser(){
         const response = await axios.post('/signup', {
             name:name,
@@ -28,6 +29,29 @@ function Singup() {
             role:role
         })
         console.log(response.data)
+        if(response.data.success){
+            alert( )
+            swal({
+                title: "success",
+                text: response.data.message,
+                icon: "success",
+                button: "Aww yiss!"
+            })
+            window.location.href="/Login"
+        }
+        else{
+            alert( )
+            swal({
+                title: "Error",
+                text: response.data.message,
+                icon: "error",
+                button: "Try Again!"
+            })
+            setName('')
+            setEmail('')
+            setPhone('')
+            setPassword('')
+        }
     }
     return (
         <div>
