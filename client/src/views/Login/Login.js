@@ -25,20 +25,18 @@ function Login() {
         })
         console.log(response.data)
         if(response.data.success){
-            alert( )
-            swal({
-                title: "success",
+            await swal({
+                title: "success 🎉",
                 text: response.data.message,
                 icon: "success",
-                button: "Aww yiss!"
+                button: "yhaa hoo!"
             })
             window.location.href="/"
 
         }
         else{
-            alert()
             swal({
-                title: "Error",
+                title: "Error 😣",
                 text: response.data.message,
                 icon: "error",
                 button: "Try Again!"
@@ -74,7 +72,7 @@ function Login() {
                                     <button type='button' className='signin-btn' onClick={signinUser}> Sign In</button>
                                 </div>
 
-                                <p className='para-login'>Create account</p>
+                               <p className='para-login'>Create account</p>
                             </div>
                         </form>
 

@@ -30,19 +30,17 @@ function Singup() {
         })
         console.log(response.data)
         if(response.data.success){
-            alert( )
-            swal({
-                title: "success",
+           await swal({
+                title: "success 🎉",
                 text: response.data.message,
                 icon: "success",
-                button: "Aww yiss!"
+                button: "yhaa hoo!"
             })
             window.location.href="/Login"
         }
         else{
-            alert( )
             swal({
-                title: "Error",
+                title: "Error 😣",
                 text: response.data.message,
                 icon: "error",
                 button: "Try Again!"
