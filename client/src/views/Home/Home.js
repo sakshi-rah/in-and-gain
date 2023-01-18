@@ -1,8 +1,25 @@
-import React from 'react'
+import React,{useState, useEffect} from 'react'
+import"./Home.css"
+import { currentUser } from '../../Util/currentUser';
 
 function Home() {
+  function logOut(){
+    localStorage.removeItem('currentUser');
+    window.location.href="/Login"
+
+  }
+
+  if(!currentUser){
+    window.location.href="/Login"
+  }
   return (
-    <div>Home</div>
+    <div>
+      <h1 className='text-center'>Home</h1>
+      <h2>{currentUser?.name}</h2>
+
+      <button type='button' className='btn btn-info' onClick={logOut}>Logout</button>
+      
+    </div>
   )
 }
 

@@ -7,13 +7,13 @@
 .signup-heading:hover{
     color: #0066ff;
 }
-.form-container {
+.signup-form-container {
     margin-top: 40px;
     margin-left: 80px;
     width: 500px;
     height: 500px;
 }
-.first-container{
+.signup-first-container{
     display: block;
 }
 .profile-pic-container{
@@ -25,17 +25,18 @@
     width: 60px;
     
 }
-.form-input {
+.signup-form-input {
     width: 400px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    background-color: #fff;
 }
-.form-input:hover{
+.signup-form-input:hover{
     box-shadow: 0 0 4px 0.5px  #0066ff;
 }
 
-.form-item {
+.signup-form-item {
     margin-top: 20px;
     margin-left: 50px;
     font-size: 20px;
@@ -55,12 +56,15 @@
 .create-btn:hover{
    color: #0066ff;
 }
-
+.para-signup{
+    margin-top: 5px;
+    margin-left: 55px;
+}
 /*right side container css */
 
-.right-image {
-    width: 600px;
-    height: 600px;
+.signup-right-image {
+    width: 550px;
+    height: 550px;
     margin-top: 20px;
     margin-left: 20px;
     

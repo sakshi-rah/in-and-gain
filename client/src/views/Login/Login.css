@@ -1,0 +1,75 @@
+/*left side container css */
+
+.signup-heading{
+    color: #E17FA3;
+}
+
+.signup-heading:hover{
+    color: #0066ff;
+}
+.login-form-container {
+    margin-top: 100px;
+    margin-left: 80px;
+    width: 500px;
+    height: 500px;
+}
+.first-login-container{
+    display: block;
+}
+.profile-pic-container{
+   text-align: center;
+   margin-left: 2px;
+    cursor: pointer;
+}
+.profile-pic{
+    width: 60px;
+    
+}
+.login-form-input {
+    width: 400px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #fff;
+}
+.login-form-input:hover{
+    box-shadow: 0 0 4px 0.5px  #0066ff;
+}
+
+.login-form-item {
+    margin-top: 20px;
+    margin-left: 50px;
+    font-size: 20px;
+}
+
+.signin-btn {
+    width: 400px;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: #E17FA3;
+    color: white;
+    font-size: 20px;
+}
+.signin-btn:hover{
+   color: #0066ff;
+}
+.para-login{
+    margin-top: 5px;
+    margin-left: 55px;
+}
+
+/*right side container css */
+.login-right-container{
+    margin-top: 0;
+}
+.login-right-image {
+    width: 500px;
+    height: 500px;
+    margin-top: 40px;
+    margin-left: 20px;
+ 
+    
+}
