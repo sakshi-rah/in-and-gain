@@ -16,7 +16,7 @@ const PORT = process.env.PORT || 5000;
 
 
 mongoose.connect(process.env.MONGODB_URL, () => {
-    console.log('connected to mongoose')
+    console.log('Connected to MongoDB')
 })
 
 //signup routes
@@ -144,6 +144,16 @@ app.get('/foodItemByTitle', async (req, res) => {
         title: { $regex: title, $options: 'i' }
     })
 
+    res.json({
+        success: true,
+        description: "Food Items Fatch Successfully",
+        data: foodItems
+    })
+})
+//search all food api route
+app.get('/allFodItems', async (req, res) => {
+
+    const foodItems = await FoodItem.find()
     res.json({
         success: true,
         description: "Food Items Fatch Successfully",

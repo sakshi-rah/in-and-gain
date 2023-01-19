@@ -2,9 +2,9 @@ import React ,{useState, useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Signup.css"
-import signupImg from "./../../Images/signup-page-pic.png"
-import profilePic from "./../../Images/profile-pic.png"
-import { currentUser } from '../../Util/currentUser'
+import signupImg from "./../../images/signup-page-pic.png"
+import profilePic from "./../../images/profile-pic.png"
+import { currentUser } from '../../util/currentUser'
 
 
 function Singup() {
@@ -55,6 +55,7 @@ function Singup() {
         <div>
             <h1 className='text-center mt-3 signup-heading'>Create Account</h1>
             <div className='row'>
+
                 <div className='col-md-6'>
                     <div className='signup-form-container '>
                         <form>
@@ -92,10 +93,9 @@ function Singup() {
 
                     </div>
                 </div>
+                
                 <div className='col-md-6'>
-                    <div className='signup-right-container'>
-                        <img src={signupImg} className="signup-right-image" />
-                    </div>
+                    <img src={signupImg} alt='' className="signup-right-image" />
                 </div>
 
             </div>

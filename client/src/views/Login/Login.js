@@ -2,9 +2,9 @@ import React, { useState ,useEffect} from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Login.css"
-import signinImg from "./../../Images/login-page-pic.png"
-import profilePic from "./../../Images/profile-pic.png"
-import { currentUser } from '../../Util/currentUser'
+import signinImg from "./../../images/login-page-pic.png"
+import profilePic from "./../../images/profile-pic.png"
+import { currentUser } from '../../util/currentUser'
 
 
 function Login() {
@@ -25,17 +25,18 @@ function Login() {
         })
         console.log(response.data)
         if(response.data.success){
-            await swal({
+        await swal({
                 title: "success 🎉",
                 text: response.data.message,
                 icon: "success",
                 button: "yhaa hoo!"
             })
+            localStorage.setItem('currentUser', JSON.stringify(response.data.data))
             window.location.href="/"
 
         }
         else{
-            swal({
+            await swal({
                 title: "Error 😣",
                 text: response.data.message,
                 icon: "error",
@@ -50,7 +51,7 @@ function Login() {
         <div>
             <h1 className='text-center mt-3 signup-heading'>Login</h1>
             <div className='row'>
-                <div className='col-md-6'>
+                <div class='col-md-6'>
                     <div className='login-form-container '>
                         <form>
                             <div className='first-login-container'>
@@ -79,9 +80,9 @@ function Login() {
                     </div>
                 </div>
 
-                <div className='col-md-6'>
+                <div class='col-md-6'>
                     <div className='login-right-container'>
-                        <img src={signinImg} className="login-right-image" />
+                        <img src={signinImg} alt='' className="login-right-image" />
                     </div>
                 </div>
 

@@ -31,6 +31,7 @@
     border-radius: 5px;
     cursor: pointer;
     background-color: #fff;
+    padding: 5px;
 }
 .login-form-input:hover{
     box-shadow: 0 0 4px 0.5px  #0066ff;
