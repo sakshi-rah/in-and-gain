@@ -51,10 +51,10 @@ function Login() {
         <div>
             <h1 className='text-center mt-3 signup-heading'>Login</h1>
             <div className='row'>
-                <div class='col-md-6'>
-                    <div className='login-form-container '>
+                <div class='col-md-6 col border'>
+                    
                         <form>
-                            <div className='first-login-container'>
+                            <div className='first-login-container '>
                                 <div className='profile-pic-container'>
                                     <img src={profilePic} className='profile-pic' />
                                 </div>
@@ -65,7 +65,7 @@ function Login() {
                                 </div>
 
                                 <div className='login-form-item'>
-                                    <label htmlFor='password'>Password </label>
+                                    <label htmlFor='password'>Password </label> {<br></br>}
                                     <input type="password" id='password' className='login-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
                                 </div>
 
@@ -77,10 +77,9 @@ function Login() {
                             </div>
                         </form>
 
-                    </div>
                 </div>
 
-                <div class='col-md-6'>
+                <div class='col-md-6 border'>
                     <div className='login-right-container'>
                         <img src={signinImg} alt='' className="login-right-image" />
                     </div>

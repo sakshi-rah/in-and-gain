@@ -1,52 +1,62 @@
 /*left side container css */
 
-.signup-heading{
+.signup-heading {
     color: #E17FA3;
 }
 
-.signup-heading:hover{
+.signup-heading:hover {
     color: #0066ff;
 }
-.login-form-container {
-    margin-top: 100px;
-    margin-left: 80px;
+
+.first-login-container {
     width: 500px;
-    height: 500px;
+    height: 400px;
+    margin-top: 70px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 15px;
+    background-color: #fff;
+    border-radius: 10px;
 }
-.first-login-container{
-    display: block;
-}
-.profile-pic-container{
-   text-align: center;
-   margin-left: 2px;
+
+.profile-pic-container {
+    text-align: center;
+    margin-left: 2px;
     cursor: pointer;
 }
-.profile-pic{
+
+.profile-pic {
     width: 60px;
-    
+
 }
+
 .login-form-input {
     width: 400px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: beige;
     padding: 5px;
+    border-bottom: 1px solid black;
 }
-.login-form-input:hover{
-    box-shadow: 0 0 4px 0.5px  #0066ff;
+
+.login-form-input:hover {
+    box-shadow: 0 0 4px 0.5px #0066ff;
 }
 
 .login-form-item {
-    margin-top: 20px;
-    margin-left: 50px;
+    margin-top: 10px;
+    margin-left: 35px;
+    margin-right: 30px;
     font-size: 20px;
 }
 
 .signin-btn {
     width: 400px;
     height: 40px;
-    margin-left: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 30px;
     border: none;
     border-radius: 5px;
@@ -54,23 +64,26 @@
     color: white;
     font-size: 20px;
 }
-.signin-btn:hover{
-   color: #0066ff;
+
+.signin-btn:hover {
+    color: #0066ff;
 }
-.para-login{
+
+.para-login {
     margin-top: 5px;
     margin-left: 55px;
 }
 
 /*right side container css */
-.login-right-container{
+.login-right-container {
     margin-top: 0;
 }
+
 .login-right-image {
-    width: 500px;
-    height: 500px;
+    width: 450px;
+    height: 450px;
     margin-top: 40px;
     margin-left: 20px;
- 
-    
+    border: 1px solid black;
+
 }
