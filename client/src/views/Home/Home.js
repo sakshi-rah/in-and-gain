@@ -1,25 +1,30 @@
 import React, { useState, useEffect } from 'react'
-import axios from 'axios';
+import axios from "axios"
 import "./Home.css"
-import FoodItemCard from '../../components/FoodItemCard/FoodItemCard';
-import { currentUser } from '../../util/currentUser';
+import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
+import { currentUser } from './../../util/currentUser'
+import { loginRequired } from '../../util/loginRequired'
+import Navbar from "./../../components/Navbar/Navbar"
 
 function Home() {
-  const [searchText, setSearchText] = useState('')
-  const [currentFoodItems, setAllFoodItems] = useState([])
+
+  const [searchText, setSearchText] = useState("")
+  const [currentFoodItems, setCurrentFoodItems] = useState([])
 
   async function fetchAllItems() {
-    console.log('fetching all items')
-    const response = await axios.get('/allFodItems')
-    console.log(response.data.data)
-    setAllFoodItems(response.data.data)
+    console.log("Fetching All Items");
+    const response = await axios.get('/allFoodItems')
+    console.log(response.data.data);
+    setCurrentFoodItems(response.data.data)
   }
+
   async function fetchSpecificItems() {
-    console.log('fetching specific items')
+    console.log("Fetching Specific Items");
     const response = await axios.get(`/foodItemByTitle?title=${searchText}`)
-    console.log(response.data.data)
-    setAllFoodItems(response.data.data)
+    console.log(response.data.data);
+    setCurrentFoodItems(response.data.data)
   }
+
   useEffect(() => {
     if (searchText.length > 0) {
       fetchSpecificItems()
@@ -32,33 +37,38 @@ function Home() {
   function logOut() {
     localStorage.removeItem('currentUser');
     window.location.href = "/login"
-
   }
+
+  useEffect(() => {
+    loginRequired()
+  }, [])
 
   return (
     <div>
-      <h1 className='text-center'>Home</h1>
-      <h2>{currentUser?.name}</h2>
-      <div className='text-center'>
-        <input type='search' placeholder='Search' className='btn-search'
-          value={searchText} onChange={(e) => setSearchText(e.target.value)} />
+      <Navbar />
+      <h1>Home Page</h1>
+
+      <h4>{currentUser?.name}</h4>
+
+      <div className='search-container text-center'>
+        <input type='text' placeholder='Search' className='fs-4'
+          value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
       </div>
 
       <div className='food-items-result'>
-        <div className='row'>
+        <div className='row food-items-row'>
           {
             currentFoodItems?.map((foodItem, index) => {
-              return (<FoodItemCard description={foodItem.description} category={foodItem.category} title={foodItem.title} 
-                price={foodItem.price} imgUrl={foodItem.imgUrl}  key={index}/>)
+              return (<FoodItemCard category={foodItem.category} description={foodItem.description}
+                imgURL={foodItem.imgURL} price={foodItem.price} title={foodItem.title} key={index} />)
             })
           }
-
         </div>
       </div>
 
-
-      <button type='button' className='btn btn-info' 
-      onClick={logOut}>Logout</button>
+      <button type='button' className='btn btn-info'
+        onClick={logOut}>Logout
+      </button>
 
     </div>
   )

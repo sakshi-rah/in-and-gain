@@ -151,12 +151,12 @@ app.get('/foodItemByTitle', async (req, res) => {
     })
 })
 //search all food api route
-app.get('/allFodItems', async (req, res) => {
+app.get('/allFoodItems', async (req, res) => {
 
     const foodItems = await FoodItem.find()
     res.json({
         success: true,
-        description: "Food Items Fatch Successfully",
+        description: "Food Items Fetch Successfully",
         data: foodItems
     })
 })
