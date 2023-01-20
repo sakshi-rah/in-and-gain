@@ -2,7 +2,7 @@ import React,{useState} from 'react'
 import swal from 'sweetalert'
 import "./FoodItemCard.css"
 
-function FoodItemCard(imgUrl, price, description, title, category) {
+function FoodItemCard({imgUrl, price, description, title, category}) {
     const [quantity, setQuantity] = useState(1)
 
     async function addToList(){
@@ -27,9 +27,9 @@ function FoodItemCard(imgUrl, price, description, title, category) {
 
     return (
         <div>
-            <div className='food-item-card'>
+            <div className='col-md-3 display-flex'>
                 <div>
-                    <img src={imgUrl} alt='' />
+                    <img src={imgUrl} alt='' className='food-card-img' />
                 </div>
                 <h3>{title}</h3>
                 <p>{description || title}</p>

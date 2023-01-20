@@ -5,7 +5,7 @@ import "./Login.css"
 import signinImg from "./../../images/login-page-pic.png"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
-import Navbar from '../../components/Navbar/Navbar'
+
 
 
 function Login() {
@@ -50,7 +50,7 @@ function Login() {
     }
     return (
         <div>
-            <Navbar />
+           
 
             <div className='row'>
                 <div class='col-md-6 col border'>

@@ -3,7 +3,7 @@ import axios from "axios"
 import "./Home.css"
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { currentUser } from './../../util/currentUser'
-import { loginRequired } from '../../util/loginRequired'
+import {loginRequired} from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
 
 function Home() {
@@ -22,7 +22,7 @@ function Home() {
     console.log("Fetching Specific Items");
     const response = await axios.get(`/foodItemByTitle?title=${searchText}`)
     console.log(response.data.data);
-    setCurrentFoodItems(response.data.data)
+   // setCurrentFoodItems(response.data.data)
   }
 
   useEffect(() => {
@@ -46,7 +46,6 @@ function Home() {
   return (
     <div>
       <Navbar />
-      <h1>Home Page</h1>
 
       <h4>{currentUser?.name}</h4>
 
@@ -56,11 +55,11 @@ function Home() {
       </div>
 
       <div className='food-items-result'>
-        <div className='row food-items-row'>
+        <div className='row '>
           {
             currentFoodItems?.map((foodItem, index) => {
-              return (<FoodItemCard category={foodItem.category} description={foodItem.description}
-                imgURL={foodItem.imgURL} price={foodItem.price} title={foodItem.title} key={index} />)
+              return (<FoodItemCard category={foodItem?.category} description={foodItem?.description}
+                imgUrl={foodItem?.imgUrl} price={foodItem?.price} title={foodItem?.title} key={index} />)
             })
           }
         </div>
