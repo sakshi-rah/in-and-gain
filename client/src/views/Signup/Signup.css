@@ -4,13 +4,7 @@
     padding: 0%;
     box-sizing: border-box;
 }
-.main-signup-container{
-    background-image: url("./../../images/cafe-bg.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 750px;
-}
+
 .signup-heading{
     color: #E17FA3;
 }
@@ -29,10 +23,10 @@
     width: 580px;
     height: 600px;
     margin-top: 25px;
-    margin-left: 60px;
-    padding: 15px;
+    margin-left: 20px;
+    padding: 10px;
     background-color: beige;
-    box-shadow: 0 2px 4px 0 #0066ff;
+    box-shadow: 0 2px 4px 0 gray;
     border-radius: 10px;
 }
 .profile-pic-container{
@@ -82,4 +76,13 @@
 .para-signup{
     margin-top: 5px;
     margin-left: 55px;
+}
+/*right side container css */
+
+.signup-right-image {
+    width: 550px;
+    height: 550px;
+    margin-top: 50px;
+    margin-left: 10px;
+  
 }

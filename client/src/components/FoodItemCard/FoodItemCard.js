@@ -26,7 +26,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
     }
 
     return (
-        <div className='col-md-4'>
+        <div className='col-md-4 '>
             <div className='sweet-item-card'>
 
                 < div className='sweet-food-card-body'>
@@ -34,20 +34,23 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                         <img src={imgUrl} alt='' className='food-card-img' />
                     </div>
 
-                    <div>
-                        <h3>{title}</h3>
+                    <div className='sweet-card-sub-container'>
+                        <h4>{title}</h4>
                         <p>{description || title}</p>
-                        <p>{price}/- Only</p>
-                        <span>{category}</span>
-
-                        <div className='quantity-btn-container'>
-                            <span className='qnt-btn' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
-                            <span className='qnt-text'>{quantity}</span>
-                            <span className='qnt-btn' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>
+                        <div>
+                            <p> Price : {price}₹</p>
                         </div>
 
-                        <div>
-                            <button type="button" className='btn-add-to-list' onClick={addToList}>Add To List</button>
+                        <div className='qnt-btn-main-container'>
+                            <div className='quantity-btn-container'>
+                                <span className='qnt-btn' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
+                                <span className='qnt-text'>{quantity}</span>
+                                <span className='qnt-btn' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>
+                            </div>
+
+                            <div>
+                                <button type="button" className='btn-add-to-list' onClick={addToList}>Add To List</button>
+                            </div>
                         </div>
                     </div>
                 </div>

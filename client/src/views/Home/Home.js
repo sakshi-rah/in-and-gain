@@ -22,7 +22,7 @@ function Home() {
     console.log("Fetching Specific Items");
     const response = await axios.get(`/foodItemByTitle?title=${searchText}`)
     console.log(response.data.data);
-   // setCurrentFoodItems(response.data.data)
+    setCurrentFoodItems(response.data.data)
   }
 
   useEffect(() => {

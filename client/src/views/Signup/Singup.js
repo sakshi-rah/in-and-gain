@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Signup.css"
+import signupImg from "./../../images/signup-page-pic.png"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
 import { Link } from 'react-router-dom'
@@ -52,11 +53,11 @@ function Singup() {
         }
     }
     return (
-        <div className='main-signup-container'>
-            <Navbar/>
+        <div>
+            <Navbar />
             <div className='row'>
 
-                <div className='col-md-12 col-12 col-lg-8'>
+                <div className='col-md-6'>
 
                     <form>
                         <div className='signup-first-container'>
@@ -93,7 +94,10 @@ function Singup() {
                                 </Link></p>
                         </div>
                     </form>
+                </div>
 
+                <div className='col-md-6'>
+                    <img src={signupImg} alt='' className="signup-right-image" />
                 </div>
             </div>
 

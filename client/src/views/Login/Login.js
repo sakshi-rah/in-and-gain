@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Login.css"
+import signinImg from "./../../images/login-page-pic.png"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
 import { Link } from 'react-router-dom'
@@ -48,12 +49,12 @@ function Login() {
         }
     }
     return (
-        <div className='main-login-container'>
+        <div >
 
             <Navbar />
             <div className='row'>
 
-                <div class='col-md-12 col-12 col-lg-8 '>
+                <div class='col-md-6  '>
 
                     <form>
                         <div className='first-login-container '>
@@ -82,7 +83,11 @@ function Login() {
                     </form>
 
                 </div>
-
+                <div class='col-md-6 '>
+                    <div className='login-right-container'>
+                        <img src={signinImg} alt='' className="login-right-image" />
+                    </div>
+                </div>
             </div>
         </div>
     )
