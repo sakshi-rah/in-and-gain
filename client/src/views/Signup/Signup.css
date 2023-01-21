@@ -1,9 +1,15 @@
 /*left side container css */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
 .main-signup-container{
     background-image: url("./../../images/cafe-bg.webp");
     background-size: cover;
-   width: 100%;
-   padding: 40px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 750px;
 }
 .signup-heading{
     color: #E17FA3;
@@ -22,7 +28,7 @@
 .signup-first-container{
     width: 580px;
     height: 600px;
-    margin-top: 20px;
+    margin-top: 25px;
     margin-left: 60px;
     padding: 15px;
     background-color: beige;
@@ -40,7 +46,7 @@
     
 }
 .signup-form-input {
-    width: 400px;
+    width: 450px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -60,7 +66,7 @@
 }
 
 .create-btn {
-    width: 400px;
+    width: 450px;
     height: 40px;
     margin-left: 50px;
     margin-top: 30px;
@@ -76,13 +82,4 @@
 .para-signup{
     margin-top: 5px;
     margin-left: 55px;
-}
-/*right side container css */
-
-.signup-right-image {
-    width: 550px;
-    height: 550px;
-    margin-top: 20px;
-    margin-left: 20px;
-    
 }

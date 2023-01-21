@@ -1,4 +1,4 @@
-.food-item-card{
+.sweet-item-card{
     margin: 5px;
     padding: 5px;
     border: 1px solid #ccc;
@@ -53,4 +53,7 @@
     justify-content: space-around;
     align-items: center;
   }
-  
+  .sweet-food-card-body{
+    display: flex;
+    justify-content: space-evenly;
+  }

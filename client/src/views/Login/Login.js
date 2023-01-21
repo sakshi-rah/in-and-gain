@@ -5,9 +5,7 @@ import "./Login.css"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
 import { Link } from 'react-router-dom'
-
-
-
+import Navbar from "./../../components/Navbar/Navbar"
 
 function Login() {
     const [email, setEmail] = useState("")
@@ -52,7 +50,7 @@ function Login() {
     return (
         <div className='main-login-container'>
 
-
+            <Navbar />
             <div className='row'>
 
                 <div class='col-md-12 col-12 col-lg-8 '>

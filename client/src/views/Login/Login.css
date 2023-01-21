@@ -1,20 +1,21 @@
 /*left side container css */
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
 
-.main-login-container{
+.main-login-container {
     background-image: url("./../../images/cafe-bg.webp");
     background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 650px;
 
 }
+
 .login-heading {
-    
+
     color: #E17FA3;
 }
 
@@ -25,7 +26,7 @@
 .first-login-container {
     width: 500px;
     height: 500px;
-    margin-top: 70px;
+    margin-top: 50px;
     margin-left: 90px;
     padding: 15px;
     background-color: beige;
@@ -87,10 +88,5 @@
 .para-login {
     margin-top: 5px;
     margin-left: 45px;
-   
+
 }
-
-
-
-    
-

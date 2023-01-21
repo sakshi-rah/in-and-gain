@@ -4,7 +4,8 @@ import swal from 'sweetalert'
 import "./Signup.css"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
-
+import { Link } from 'react-router-dom'
+import Navbar from "./../../components/Navbar/Navbar"
 
 function Singup() {
     const [name, setName] = useState("")
@@ -52,7 +53,7 @@ function Singup() {
     }
     return (
         <div className='main-signup-container'>
-
+            <Navbar/>
             <div className='row'>
 
                 <div className='col-md-12 col-12 col-lg-8'>
@@ -63,34 +64,33 @@ function Singup() {
                             <div className='profile-pic-container'>
                                 <img src={profilePic} className='profile-pic' alt='' />
                             </div>
-                            <div className='sig'>
-                                <div className='signup-form-item'>
-                                    <label htmlFor='name' className=''>Full Name  </label>
-                                    <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
-                                </div>
-
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='email'>Email </label>
-                                    <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
-                                </div>
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='password'>Password </label>
-                                    <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
-                                </div>
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='phone'>Phone No. </label>
-                                    <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                                </div>
-
-                                <div className='btn-box'>
-                                    <button type='button' className='create-btn' onClick={signupUser}> Create</button>
-                                </div>
-                                <p className='para-signup'>Have already an account? <b>Login here</b></p>
+                            <div className='signup-form-item'>
+                                <label htmlFor='name' className=''>Full Name  </label> {<br></br>}
+                                <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
                             </div>
 
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='email'>Email </label> {<br></br>}
+                                <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </div>
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='password'>Password </label>{<br></br>}
+                                <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='phone'>Phone No. </label>{<br></br>}
+                                <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                            </div>
+
+                            <div className='btn-box'>
+                                <button type='button' className='create-btn' onClick={signupUser}> Create</button>
+                            </div>
+                            <p className='para-signup'>
+                                Have already an account?  <Link to=""><b>Login here</b>
+                                </Link></p>
                         </div>
                     </form>
 
