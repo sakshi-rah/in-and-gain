@@ -1,15 +1,19 @@
 .sweet-item-card {
   margin-top: 45px;
-  margin-left: 40px;
-  width: 400px;
-  height: 230px;
+  margin-left: 20px;
+  width: 450px;
+  height: 200px;
   border-radius: 5px;
   box-shadow: 0  0 15px  #808080;
+}
+.price{
+  color: #00cc99;
+  font-size: 20px;
 }
 
 .food-card-img {
   width: 200px;
-  height: 230px;
+  height: 225px;
   object-fit: cover;
   border-radius: 5px;
   padding: 0;
@@ -22,7 +26,7 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 30px;
+  margin-top: 10px;
   border: none;
   border-radius: 5px;
   background-color: #00cc99  ;
@@ -31,12 +35,6 @@
   font-size: 18px;
 }
 
-.qnt-btn-main-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-}
 
 .qnt-btn {
   display: flex;
@@ -44,7 +42,7 @@
   justify-content: center;
   font-size: 30px;
   background-color: black;
-  height: 35px;
+  height: 30px;
   width: 20px;
   color: white;
   border-radius: 2px;
@@ -53,21 +51,23 @@
 }
 
 .qnt-text {
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .quantity-btn-container {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  border: 1px solid black;
 }
 
 .sweet-food-card-body {
   display: flex;
   justify-content: space-between;
+  background-color: whitesmoke;
 
 }
-
 .sweet-card-sub-container {
-  margin-right: 10px;
+  border: 1px solid black;
+  width: 240px;
 }

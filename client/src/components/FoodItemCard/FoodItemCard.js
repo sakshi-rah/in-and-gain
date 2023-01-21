@@ -37,11 +37,10 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                     <div className='sweet-card-sub-container'>
                         <h4>{title}</h4>
                         <p>{description || title}</p>
-                        <div cla>
+                        <div className='price'>
                             <p> Price : {price}₹</p>
                         </div>
 
-                        <div className='qnt-btn-main-container'>
                             <div className='quantity-btn-container'>
                                 <span className='qnt-btn' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
                                 <span className='qnt-text'>{quantity}</span>
@@ -51,7 +50,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                             <div>
                                 <button type="button" className='btn-add-to-list' onClick={addToList}>Add To List</button>
                             </div>
-                        </div>
+                       
                     </div>
                 </div>
 
