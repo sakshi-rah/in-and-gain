@@ -37,7 +37,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                     <div className='sweet-card-sub-container'>
                         <h4>{title}</h4>
                         <p>{description || title}</p>
-                        <div>
+                        <div cla>
                             <p> Price : {price}₹</p>
                         </div>
 
