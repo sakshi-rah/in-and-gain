@@ -26,8 +26,8 @@ function FoodItemCard({imgUrl, price, description, title, category}) {
     }
 
     return (
-        <div>
-            <div className='col-md-3 display-flex'>
+        <div className='col-md-3'>
+            <div className='food-item-card'>
                 <div>
                     <img src={imgUrl} alt='' className='food-card-img' />
                 </div>
