@@ -1,21 +1,26 @@
 /*left side container css */
-
-.signup-heading {
-    color: #E17FA3;
+.main-login-container{
+    background-image: url("./../../images/cafe-bg.webp");
+    background-size: cover;
+   width: 100%;
+   padding: 40px;
+}
+.login-heading {
+    color: #0066ff;
 }
 
-.signup-heading:hover {
-    color: #0066ff;
+.login-heading:hover {
+    color: #E17FA3;
 }
 
 .first-login-container {
     width: 500px;
-    height: 400px;
+    height: 500px;
     margin-top: 70px;
     margin-left: auto;
     margin-right: auto;
     padding: 15px;
-    background-color: #fff;
+    background-color: transparent;
     border-radius: 10px;
 }
 
@@ -23,6 +28,7 @@
     text-align: center;
     margin-left: 2px;
     cursor: pointer;
+    margin-top: 30px;
 }
 
 .profile-pic {
@@ -71,19 +77,23 @@
 
 .para-login {
     margin-top: 5px;
-    margin-left: 55px;
+    margin-left: 45px;
+   
 }
+
 
 /*right side container css */
 .login-right-container {
     margin-top: 0;
+   
 }
 
 .login-right-image {
     width: 450px;
     height: 450px;
-    margin-top: 40px;
+    margin-top: 80px;
+    padding: 0;
     margin-left: 20px;
-    border: 1px solid black;
+    
 
 }

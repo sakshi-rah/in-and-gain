@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Login.css"
-import signinImg from "./../../images/login-page-pic.png"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
+import { Link } from 'react-router-dom'
+
 
 
 
@@ -49,14 +50,20 @@ function Login() {
         }
     }
     return (
-        <div>
-           
+        <div className='main-login-container'>
+
 
             <div className='row'>
-                <div class='col-md-6 col border'>
-                    <h1 className='text-center mt-3 signup-heading'>Login</h1>
+
+                <div class='col-md-6 col'>
+                    
+                </div>
+
+                <div class='col-md-6 col'>
+
                     <form>
                         <div className='first-login-container '>
+                            <h1 className='text-center login-heading'>Login</h1>
                             <div className='profile-pic-container'>
                                 <img src={profilePic} className='profile-pic' alt='' />
                             </div>
@@ -70,22 +77,19 @@ function Login() {
                                 <label htmlFor='password'>Password </label> {<br></br>}
                                 <input type="password" id='password' className='login-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
                             </div>
-
+                            <p className='para-login'>Forgot your password?</p>
                             <div className='btn-box'>
                                 <button type='button' className='signin-btn' onClick={signinUser}> Sign In</button>
                             </div>
 
-                            <p className='para-login'>Create account</p>
+                            <p className='para-login'>No account? Create one here account
+                                <Link to=""> <b>Sign Up</b> </Link></p>
                         </div>
                     </form>
 
                 </div>
 
-                <div class='col-md-6 border'>
-                    <div className='login-right-container'>
-                        <img src={signinImg} alt='' className="login-right-image" />
-                    </div>
-                </div>
+
 
             </div>
         </div>

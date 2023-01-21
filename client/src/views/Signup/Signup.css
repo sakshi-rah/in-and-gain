@@ -1,5 +1,10 @@
 /*left side container css */
-
+.main-signup-container{
+    background-image: url("./../../images/bg-login.webp");
+    background-size: cover;
+   width: 100%;
+   padding: 40px;
+}
 .signup-heading{
     color: #E17FA3;
 }

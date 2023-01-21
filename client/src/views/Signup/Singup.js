@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Signup.css"
-import signupImg from "./../../images/signup-page-pic.png"
 import profilePic from "./../../images/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
 
@@ -52,54 +51,57 @@ function Singup() {
         }
     }
     return (
-        <div>
-            <h1 className='text-center mt-3 signup-heading'>Create Account</h1>
+        <div className='main-signup-container'>
+
             <div className='row'>
 
                 <div className='col-md-6'>
-                    <div className='signup-form-container '>
-                        <form>
-                            <div className='signup-first-container'>
-                                <div className='profile-pic-container'>
-                                    <img src={profilePic} className='profile-pic' alt='' />
-                                </div>
-                                <div className='signup-form-item'>
-                                    <label htmlFor='name' className=''>Full Name  </label>
-                                    <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
-                                </div>
 
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='email'>Email </label> {<br></br>}
-                                    <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
-                                </div>
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='password'>Password </label>
-                                    <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
-                                </div>
-
-                                <div className='signup-form-item'>
-                                    <label htmlFor='phone'>Phone No. </label>
-                                    <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                                </div>
-
-                                <div className='btn-box'>
-                                    <button type='button' className='create-btn' onClick={signupUser}> Create</button>
-                                </div>
-                                <p className='para-signup'>Login</p>
-                            </div>
-                        </form>
-
-                    </div>
                 </div>
 
                 <div className='col-md-6'>
-                    <img src={signupImg} alt='' className="signup-right-image" />
-                </div>
 
+                    <form>
+                        <h1 className='text-center  signup-heading'>Create Account</h1>
+                        <div className='signup-first-container'>
+                            <div className='profile-pic-container'>
+                                <img src={profilePic} className='profile-pic' alt='' />
+                            </div>
+                            <div className='signup-form-item'>
+                                <label htmlFor='name' className=''>Full Name  </label>
+                                <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
+                            </div>
+
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='email'>Email </label> {<br></br>}
+                                <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
+                            </div>
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='password'>Password </label>
+                                <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
+                            </div>
+
+                            <div className='signup-form-item'>
+                                <label htmlFor='phone'>Phone No. </label>
+                                <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                            </div>
+
+                            <div className='btn-box'>
+                                <button type='button' className='create-btn' onClick={signupUser}> Create</button>
+                            </div>
+                            <p className='para-signup'>Login</p>
+                        </div>
+                    </form>
+
+                </div>
             </div>
+
+
+
         </div>
+
     )
 }
 
