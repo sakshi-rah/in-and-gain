@@ -55,43 +55,42 @@ function Singup() {
 
             <div className='row'>
 
-                <div className='col-md-6'>
-
-                </div>
-
-                <div className='col-md-6'>
+                <div className='col-md-12 col-12 col-lg-8'>
 
                     <form>
-                        <h1 className='text-center  signup-heading'>Create Account</h1>
                         <div className='signup-first-container'>
+                            <h1 className='text-center  signup-heading'>Create Account</h1>
                             <div className='profile-pic-container'>
                                 <img src={profilePic} className='profile-pic' alt='' />
                             </div>
-                            <div className='signup-form-item'>
-                                <label htmlFor='name' className=''>Full Name  </label>
-                                <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
-                            </div>
+                            <div className='sig'>
+                                <div className='signup-form-item'>
+                                    <label htmlFor='name' className=''>Full Name  </label>
+                                    <input type="text" id='name' className='signup-form-input' value={name} onChange={(e) => setName(e.target.value)} />
+                                </div>
 
 
-                            <div className='signup-form-item'>
-                                <label htmlFor='email'>Email </label> {<br></br>}
-                                <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                <div className='signup-form-item'>
+                                    <label htmlFor='email'>Email </label>
+                                    <input type="email" id='suremailname' className='signup-form-input' value={email} onChange={(e) => setEmail(e.target.value)} />
+                                </div>
+
+                                <div className='signup-form-item'>
+                                    <label htmlFor='password'>Password </label>
+                                    <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
+                                </div>
+
+                                <div className='signup-form-item'>
+                                    <label htmlFor='phone'>Phone No. </label>
+                                    <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                                </div>
+
+                                <div className='btn-box'>
+                                    <button type='button' className='create-btn' onClick={signupUser}> Create</button>
+                                </div>
+                                <p className='para-signup'>Have already an account? <b>Login here</b></p>
                             </div>
 
-                            <div className='signup-form-item'>
-                                <label htmlFor='password'>Password </label>
-                                <input type="password" id='password' className='signup-form-input' value={password} onChange={(e) => setPassword(e.target.value)} />
-                            </div>
-
-                            <div className='signup-form-item'>
-                                <label htmlFor='phone'>Phone No. </label>
-                                <input type="text" id='phone' className='signup-form-input' value={phone} onChange={(e) => setPhone(e.target.value)} />
-                            </div>
-
-                            <div className='btn-box'>
-                                <button type='button' className='create-btn' onClick={signupUser}> Create</button>
-                            </div>
-                            <p className='para-signup'>Login</p>
                         </div>
                     </form>
 

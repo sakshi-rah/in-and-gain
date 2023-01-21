@@ -55,11 +55,7 @@ function Login() {
 
             <div className='row'>
 
-                <div class='col-md-6 col'>
-                    
-                </div>
-
-                <div class='col-md-6 col'>
+                <div class='col-md-12 col-12 col-lg-8 '>
 
                     <form>
                         <div className='first-login-container '>
@@ -88,8 +84,6 @@ function Login() {
                     </form>
 
                 </div>
-
-
 
             </div>
         </div>

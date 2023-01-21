@@ -1,6 +1,6 @@
 /*left side container css */
 .main-signup-container{
-    background-image: url("./../../images/bg-login.webp");
+    background-image: url("./../../images/cafe-bg.webp");
     background-size: cover;
    width: 100%;
    padding: 40px;
@@ -20,12 +20,20 @@
    
 }
 .signup-first-container{
-    display: block;
+    width: 580px;
+    height: 600px;
+    margin-top: 20px;
+    margin-left: 60px;
+    padding: 15px;
+    background-color: beige;
+    box-shadow: 0 2px 4px 0 #0066ff;
+    border-radius: 10px;
 }
 .profile-pic-container{
    text-align: center;
    margin-left: 2px;
     cursor: pointer;
+    margin-top: 0;
 }
 .profile-pic{
     width: 60px;
@@ -36,14 +44,16 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: #fff;
+    background-color: #f5d5e0;
+    padding: 5px;
+    border-bottom: 1px solid black;
 }
 .signup-form-input:hover{
     box-shadow: 0 0 4px 0.5px  #0066ff;
 }
 
 .signup-form-item {
-    margin-top: 20px;
+    margin-top: 15px;
     margin-left: 50px;
     font-size: 20px;
     border: 1px solide red;

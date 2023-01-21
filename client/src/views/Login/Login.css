@@ -1,26 +1,35 @@
 /*left side container css */
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
 .main-login-container{
     background-image: url("./../../images/cafe-bg.webp");
     background-size: cover;
-   width: 100%;
-   padding: 40px;
+   background-repeat: no-repeat;
+   background-position: center;
+   height: 650px;
+
 }
 .login-heading {
-    color: #0066ff;
+    
+    color: #E17FA3;
 }
 
 .login-heading:hover {
-    color: #E17FA3;
+    color: #0066ff;
 }
 
 .first-login-container {
     width: 500px;
     height: 500px;
     margin-top: 70px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 90px;
     padding: 15px;
-    background-color: transparent;
+    background-color: beige;
+    box-shadow: 0 2px 4px 0 #0066ff;
     border-radius: 10px;
 }
 
@@ -41,7 +50,7 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    background-color: beige;
+    background-color: #f5d5e0;
     padding: 5px;
     border-bottom: 1px solid black;
 }
@@ -82,18 +91,6 @@
 }
 
 
-/*right side container css */
-.login-right-container {
-    margin-top: 0;
-   
-}
 
-.login-right-image {
-    width: 450px;
-    height: 450px;
-    margin-top: 80px;
-    padding: 0;
-    margin-left: 20px;
     
 
-}
