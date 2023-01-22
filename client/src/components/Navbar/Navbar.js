@@ -12,7 +12,7 @@ function Navbar({ user }) {
 
   return (
     <div>
-      <nav class="navbar navbar-expand-lg navbar-bg-color">
+      <nav class="navbar navbar-expand-lg navbar-bg-color shadow">
         <div class="container-fluid">
           <a class="navbar-brand fs-4" href="#"><img src={shLogo} className='shLogo'/>SweetHub</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
