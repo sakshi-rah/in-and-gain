@@ -8,8 +8,8 @@
 }
 
 .price {
-  color: green;
- font-size: 20px;
+  color: #00cc99;
+  font-size: 20px;
   height: 30px;
 }
 
@@ -27,7 +27,7 @@
   margin-left: 10px;
   border: none;
   border-radius: 5px;
-  background-color: #00cc99;
+  background-color: #E17FA3;
   color: black;
   font-weight: bold;
   font-size: 17px;
@@ -36,7 +36,7 @@
 .btn-shop {
   width: 100px;
   height: 40px;
-  background-color: #E17FA3;
+  background-color: #00cc99;
   color: black;
   border: none;
   font-weight: bold;
@@ -98,5 +98,5 @@
 
 .sweet-card-sub-container p {
   font-size: 15px;
-  
+
 }

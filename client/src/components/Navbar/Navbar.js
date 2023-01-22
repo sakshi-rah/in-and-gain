@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import "./Navbar.css"
 import { myFoodListCount } from '../../util/myList'
 import { Link } from 'react-router-dom'
+import userPic from "./../../images/user-pic.png"
 
 function Navbar({ user }) {
   const [foodItemCount, setFoodItemCount] = useState(myFoodListCount)
@@ -20,7 +21,7 @@ function Navbar({ user }) {
               </li>
             </ul>
             <form class="d-flex align-items-center">
-              <h4 className='me-2 text-light'>Hello {user}</h4>
+              <h4 className='me-2 text-light'><img src={userPic} className='userpic'/> {user}</h4>
               <Link to="/myList" className='text-decoration-none'>
                 <h4 className='me-2 my-list'> {foodItemCount}</h4>
               </Link>
