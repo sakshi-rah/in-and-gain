@@ -39,11 +39,11 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                         <p>{description || title}</p>
 
                         <div className='price-qnt-container'>
-                            <div className='price border'>
-                                <p> Price : {price}₹</p>
+                            <div className='price '>
+                                <span> Price : {price}₹</span>
                             </div>
 
-                            <div className='quantity-btn-container border'>
+                            <div className='quantity-btn-container '>
                                 <span className='qnt-btn' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
                                 <span className='qnt-text'>{quantity}</span>
                                 <span className='qnt-btn' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>

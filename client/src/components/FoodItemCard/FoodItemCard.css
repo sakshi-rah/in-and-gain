@@ -8,13 +8,9 @@
 }
 
 .price {
-  color: #00cc99;
- font-weight: bold;
-margin-top: 0%;
-}
-
-.price p {
-  margin-top: 20px;
+  color: green;
+ font-size: 20px;
+  height: 30px;
 }
 
 .food-card-img {
@@ -82,7 +78,8 @@ margin-top: 0%;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
+  width: 90px;
+  height: 50px;
 }
 
 .sweet-food-card-body {
@@ -95,11 +92,11 @@ margin-top: 0%;
 .sweet-card-sub-container {
   width: 250px;
   border-radius: 10px;
- padding: 3px;
+  padding: 3px;
 
 }
 
 .sweet-card-sub-container p {
   font-size: 15px;
-  border: 1px solid gray;
+  
 }

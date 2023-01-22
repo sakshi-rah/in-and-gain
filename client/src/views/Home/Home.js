@@ -45,10 +45,7 @@ function Home() {
 
   return (
     <div>
-      <Navbar />
-
-      <h4>{currentUser?.name}</h4>
-
+       <Navbar user={currentUser?.name}/>
       <div className='search-container text-center'>
         <input type='text' placeholder='Search' className='fs-4'
           value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
