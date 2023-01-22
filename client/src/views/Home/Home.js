@@ -46,11 +46,6 @@ function Home() {
   return (
     <div>
        <Navbar user={currentUser?.name}/>
-      <div className='search-container text-center'>
-        <input type='text' placeholder='Search' className='fs-4'
-          value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
-      </div>
-
       <div className='food-items-result'>
         <div className='row '>
           {

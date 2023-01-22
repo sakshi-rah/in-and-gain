@@ -1,10 +1,23 @@
-.my-list{
-    background-color: #ffcc99;
-    display: block;
-    padding: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  .navbar-bg-color{
-    background-color: #E17FA3;
-  }
+.my-list {
+  cursor: pointer;
+  margin-top: 0%;
+  font-size: 18px;
+  color: rgb(224, 49, 49);
+}
+
+.navbar-bg-color {
+  background-color: #E17FA3;
+}
+
+.shLogo {
+  width: 38px;
+  border-radius: 50% ;
+  box-shadow: 0 0 2px 0.5px black;
+}
+.cart{
+  margin-top: 10px;
+  width: 32px;
+}
+.userpic {
+  width: 35px;
+}
