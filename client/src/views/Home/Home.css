@@ -1,0 +1,14 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+.gradient-bg{
+    background-image: url("./../../images/gradient-img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.mithaiimg{
+    width: 800px;
+}

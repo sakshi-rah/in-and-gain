@@ -1,15 +1,15 @@
 .sweet-item-card {
-  margin-top: 45px;
-  margin-left: 20px;
+  margin: 20px;
   width: 450px;
   height: 230px;
   border-radius: 10px;
-  box-shadow: 0 0 15px #808080;
+  box-shadow: 0 0 15px #494949;
 }
 
 .price {
   color: #00cc99;
   font-size: 20px;
+  font-weight: bold;
   height: 30px;
 }
 
@@ -18,7 +18,8 @@
   height: 230px;
   object-fit: cover;
   padding: 0;
-
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 
 .btn-add-to-list {
@@ -88,7 +89,7 @@
   display: flex;
   justify-content: space-between;
   background-color: whitesmoke;
-
+  border-radius: 10px;
 }
 
 .sweet-card-sub-container {

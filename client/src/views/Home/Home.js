@@ -3,9 +3,9 @@ import axios from "axios"
 import "./Home.css"
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { currentUser } from './../../util/currentUser'
-import {loginRequired} from "./../../util/loginRequired"
+import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
-import gradientImg from "./../../images/gradient-img.jpg"
+import mithaiImg from "./../../images/mithai.jpg"
 
 function Home() {
 
@@ -45,11 +45,17 @@ function Home() {
   }, [])
 
   return (
-    <div>
-       <Navbar user={currentUser?.name}/>
-       <div>
-        <img src={gradientImg}/>
+    <div className='gradient-bg'>
+      <Navbar user={currentUser?.name} />
+      <div>
+      <div>
+
+</div>
+        <div>
+          <img src={mithaiImg} className="mithaiimg" />
         </div>
+        
+      </div>
       <div className='food-items-result'>
         <div className='row '>
           {

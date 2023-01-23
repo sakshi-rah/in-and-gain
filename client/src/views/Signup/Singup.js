@@ -90,7 +90,7 @@ function Singup() {
                                 <button type='button' className='create-btn' onClick={signupUser}> Create</button>
                             </div>
                             <p className='para-signup'>
-                                Have already an account?  <Link to=""><b>Login here</b>
+                                Have already an account?  <Link to="/login"><b>Login here</b>
                                 </Link></p>
                         </div>
                     </form>

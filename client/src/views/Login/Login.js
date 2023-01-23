@@ -78,7 +78,7 @@ function Login() {
                             </div>
 
                             <p className='para-login'>No account? Create one here account
-                                <Link to=""> <b>Sign Up</b> </Link></p>
+                                <Link to="/signup"> <b>Sign Up</b> </Link></p>
                         </div>
                     </form>
 
