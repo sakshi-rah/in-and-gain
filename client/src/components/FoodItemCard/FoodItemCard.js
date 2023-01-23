@@ -35,7 +35,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                     </div>
 
                     <div className='sweet-card-sub-container'>
-                        <h4 className='text-uppercase'>{title}</h4>
+                        <h5 className='text-uppercase'>{title}</h5>
                         <p>{description || title}</p>
 
                         <div className='price-qnt-container'>

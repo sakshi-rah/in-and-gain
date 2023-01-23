@@ -5,6 +5,7 @@ import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { currentUser } from './../../util/currentUser'
 import {loginRequired} from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
+import gradientImg from "./../../images/gradient-img.jpg"
 
 function Home() {
 
@@ -46,6 +47,9 @@ function Home() {
   return (
     <div>
        <Navbar user={currentUser?.name}/>
+       <div>
+        <img src={gradientImg}/>
+        </div>
       <div className='food-items-result'>
         <div className='row '>
           {
