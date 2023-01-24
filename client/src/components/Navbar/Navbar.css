@@ -1,3 +1,8 @@
+.logo{
+  color: rgb(190, 47, 47);
+  font-weight: bold;
+}
+
 .my-list {
   cursor: pointer;
   margin-top: 0%;

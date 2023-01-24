@@ -6,6 +6,8 @@ import { currentUser } from './../../util/currentUser'
 import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
 import mithaiImg from "./../../images/mithai.jpg"
+import shLogo from "./../../images/shlogo.png"
+
 
 function Home() {
 
@@ -44,10 +46,21 @@ function Home() {
     <div >
       <Navbar user={currentUser?.name} />
       <div className='row'>
-        <div className='col-md-6'>
+        <div className='col-md-6 border border-danger'>
+          <div className='sweethub-container'>
+            <p><img src={shLogo} className='home-shLogo ' /> SweetHub</p>
+          </div>
+
+          <div className='home-page-container'>
+            <span className='home-page-para'>Healthy & delicious <br />sweet taste</span>
+            <p>These healthy desserts cover all the best sweet trests. providing fresh and <br />
+              sweet teste desserts,you can serve and enjoy with dessert stay happy! </p>
+          </div>
+
+          <button className='btn btn-danger' >Order Now</button>
 
         </div>
-        <div className='col-md-6'>
+        <div className='col-md-6 '>
           <img src={mithaiImg} className="mithaiimg" />
         </div>
 

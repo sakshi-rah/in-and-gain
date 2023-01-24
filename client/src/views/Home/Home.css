@@ -11,3 +11,29 @@
     padding: 5px;
     border-radius: 30px;
 }
+.home-shLogo{
+    width: 55px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+.sweethub-container{
+    width: 400px;
+    display: block;
+    color: rgb(190, 47, 47);
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    font-size: 50px;
+    font-weight: bold;
+    
+}
+.home-page-para{
+    font-size: 40px;
+    font-weight: bold;
+}
+.home-page-container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

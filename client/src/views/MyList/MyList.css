@@ -1,0 +1,17 @@
+.mylist-container{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.confirm-btn{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+.mylist-card{
+    margin: 20px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: beige;
+    box-shadow: 0 0 15px #494949;
+}
