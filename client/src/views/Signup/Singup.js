@@ -61,7 +61,7 @@ function Singup() {
 
                     <form>
                         <div className='signup-first-container'>
-                            <h1 className='text-center  signup-heading'>Create Account</h1>
+                            <h1 className='text-center'>Create Account</h1>
                             <div className='profile-pic-container'>
                                 <img src={profilePic} className='profile-pic' alt='' />
                             </div>
