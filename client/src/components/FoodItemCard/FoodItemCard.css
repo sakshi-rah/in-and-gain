@@ -1,5 +1,6 @@
 .sweet-item-card {
   margin: 20px;
+  margin-top: 50px;
   width: 450px;
   height: 230px;
   border-radius: 10px;
@@ -15,7 +16,7 @@
 
 .food-card-img {
   width: 200px;
-  height: 230px;
+  height: 250px;
   object-fit: cover;
   padding: 0;
   border-top-left-radius: 10px;
@@ -80,10 +81,9 @@
 }
 
 .sweet-card-sub-container {
-  width: 250px;
+  width: 270px;
   border-radius: 10px;
   padding: 10px;
-
 }
 
 .sweet-card-sub-container p {
