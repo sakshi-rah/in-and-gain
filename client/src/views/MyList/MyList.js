@@ -7,9 +7,14 @@ import { myFoodListItems } from '../../util/myList'
 import { currentUser } from '../../util/currentUser'
 
 function MyList() {
- async function placeFoodListItem(){
-  
- }
+  async function placeFoodListItem() {
+      const response = await axios.post('/orderFoodItems',{
+        userId: currentUser._id,
+        tableNumber:localStorage.getItem("tableNumber") ||1,
+        items: myFoodListItems
+      })
+      console.log(response.data)
+  }
   return (
     <div>
       <Navbar />
@@ -20,12 +25,12 @@ function MyList() {
             <div>
               <h6>Name: {item.name}</h6>
               <h6>Quantity: {item.quantity}</h6>
-              <h6>Price: {item.price}</h6>
+              <h6>Price: {item.price}</h6>git c
               <hr />
             </div>)
         })
       }
-      <button className='btn btn-primary'>Confirm Order</button>
+      <button className='btn btn-danger' onClick={placeFoodListItem}>Confirm Order</button>
     </div>
   )
 }
