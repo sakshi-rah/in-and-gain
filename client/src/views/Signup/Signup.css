@@ -61,18 +61,13 @@
 
 .create-btn {
     width: 450px;
-    height: 40px;
     margin-left: 50px;
     margin-top: 30px;
     border: none;
     border-radius: 5px;
-    background-color: #E17FA3;
-    color: white;
     font-size: 20px;
 }
-.create-btn:hover{
-   color: #0066ff;
-}
+
 .para-signup{
     margin-top: 5px;
     margin-left: 55px;

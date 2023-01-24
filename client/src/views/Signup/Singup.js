@@ -87,9 +87,9 @@ function Singup() {
                             </div>
 
                             <div className='btn-box'>
-                                <button type='button' className='create-btn' onClick={signupUser}> Create</button>
+                                <button type='button' className='create-btn btn btn-danger' onClick={signupUser}> Create</button>
                             </div>
-                            <p className='para-signup'>
+                            <p className='para-signup '>
                                 Have already an account?  <Link to="/login"><b>Login here</b>
                                 </Link></p>
                         </div>

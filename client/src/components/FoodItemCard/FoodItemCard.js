@@ -39,7 +39,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                         <p>{description || title}</p>
 
                         <div className='price-qnt-container'>
-                            <div className='price '>
+                            <div className='price text-success'>
                                 <span> Price : {price}₹</span>
                             </div>
 
@@ -51,8 +51,8 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                         </div>
 
                         <div>
-                            <button type="button" className='btn-add-to-list' onClick={addToList}>Add To List</button>
-                            <button type="button" className='btn-shop' onClick={addToList}>Shop</button>
+                            <button type="button" className='btn-add-to-list btn btn-danger' onClick={addToList}>Add To List</button>
+                            
                         </div>
 
                     </div>

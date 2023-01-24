@@ -3,12 +3,11 @@
     padding: 0%;
     box-sizing: border-box;
 }
-
-.gradient-bg{
-    background-image: url("./../../images/gradient-img.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-}
+    
 .mithaiimg{
-    width: 800px;
+    width: 730px;
+    margin: 5px;
+    margin-top: 50px;
+    padding: 5px;
+    border-radius: 30px;
 }

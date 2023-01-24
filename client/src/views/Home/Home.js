@@ -35,26 +35,22 @@ function Home() {
     }
   }, [searchText])
 
-  function logOut() {
-    localStorage.removeItem('currentUser');
-    window.location.href = "/login"
-  }
 
   useEffect(() => {
     loginRequired()
   }, [])
 
   return (
-    <div className='gradient-bg'>
+    <div >
       <Navbar user={currentUser?.name} />
-      <div>
-      <div>
+      <div className='row'>
+        <div className='col-md-6'>
 
-</div>
-        <div>
+        </div>
+        <div className='col-md-6'>
           <img src={mithaiImg} className="mithaiimg" />
         </div>
-        
+
       </div>
       <div className='food-items-result'>
         <div className='row '>
@@ -66,10 +62,6 @@ function Home() {
           }
         </div>
       </div>
-
-      <button type='button' className='btn btn-info'
-        onClick={logOut}>Logout
-      </button>
 
     </div>
   )

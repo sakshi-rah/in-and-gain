@@ -5,17 +5,13 @@
   color: rgb(224, 49, 49);
 }
 
-.navbar-bg-color {
-  background-color: #E17FA3;
-}
-
 .shLogo {
   width: 38px;
   border-radius: 50% ;
   box-shadow: 0 0 2px 0.5px black;
 }
 .cart{
-  width: 32px;
+  width: 35px;
 }
 .userpic {
   width: 35px;
