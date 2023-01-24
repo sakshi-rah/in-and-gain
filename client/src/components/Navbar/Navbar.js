@@ -48,7 +48,7 @@ function Navbar({ user }) {
                 </Link>
 
                 <ul class="dropdown-menu">
-                  <li><Link class="dropdown-item" to="/">sweet</Link></li>
+                  <li><Link class="dropdown-item" to="">sweet</Link></li>
                   <li><Link class="dropdown-item" to="/">ladoo</Link></li>
                   <li><Link class="dropdown-item" to="/">parfi</Link></li>
                   <li><Link class="dropdown-item" to="/">pedha</Link></li>

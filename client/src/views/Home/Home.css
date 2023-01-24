@@ -33,7 +33,7 @@
     font-weight: bold;
 }
 .home-page-container{
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 100px;
+    margin-top: 0%;
+    padding: 5px;
 }
