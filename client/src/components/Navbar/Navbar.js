@@ -15,7 +15,7 @@ function Navbar({ user }) {
     localStorage.removeItem('currentUser')
     await swal({
         icon: 'success',
-        title: "Success",
+        title: "Success 🎉",
         text: "Logout Successfully",
         button: "Ok!"
     })

@@ -57,6 +57,7 @@ function Home() {
             <p>These healthy desserts cover all the best sweet trests. providing fresh and <br />
               sweet teste desserts,you can serve and enjoy with dessert stay happy! </p>
              <Link to='/myOrders'><button className='btn btn-danger' >Order Now</button></Link> 
+             <Link to='/bookTable'><button className='btn btn-danger ms-5' >Book Table</button></Link> 
           </div>
           
         </div>
