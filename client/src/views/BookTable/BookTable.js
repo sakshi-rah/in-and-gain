@@ -4,7 +4,7 @@ import swal from 'sweetalert'
 import { currentUser } from './../../util/currentUser'
 import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"
-import table from "../../images/table.avif"
+import table from "../../images/table.png"
 
 function BookTable() {
 
@@ -35,15 +35,16 @@ function BookTable() {
 
             <Navbar />
 
-            <p className='avl-table'>Available Tables</p>
+            <p className='text-center fs-1'>Available Tables</p>
 
-            {availabletables &&
+            {
+            availabletables &&
                 availabletables?.map((availabletable) => {
                     return (
                         <div className='col-md-4'>
-                            <p className='table-name'>Table : {availabletable.tableNumber}
+                            <p className='available-table'>Table : {availabletable.tableNumber}
                                 <img className='table-img' alt='' src={table} />
-                                <button type='button' className='book-btn' onClick={bookTable}>BOOK TABLE</button>
+                                <button type='button' className='book-btn' onClick={bookTable}>Book Table</button>
                             </p>
                             <br />
                         </div>
