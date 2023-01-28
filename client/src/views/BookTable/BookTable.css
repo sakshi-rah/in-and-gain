@@ -1,23 +1,26 @@
 .available-table{
-    width: 350px;
-    background-color: whitesmoke;
+    width: 330px;
+    background-color: transparent;
     text-align: center;
     font-size: 27px;
     font-weight: 500;
-    padding: 10px;
+    padding: 7px;
     margin: 50px;
     border-radius: 20px;
     box-shadow: 0 0 15px #494949;
     
 }
 .table-img{
-    width: 200px;
+    width: 230px;
     margin:20px ;
     display: flex;
     justify-content: center;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 15%;
+    border-radius: 10px;
     box-shadow: 0 0 8px 1px black;
     cursor: pointer;
+}
+.btn{
+    width: 230px;
 }
