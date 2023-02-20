@@ -68,10 +68,10 @@ function Navbar({ user }) {
             <form class="d-flex align-items-center">
               <h4 className='me-2 text-dark'> <Link to="/login"> <img src={userPic} className='userpic' /></Link> {user}</h4>
 
-              <button type="button" class="btn btn-dark position-relative me-1 mt-1">
+              <button type="button" class="btn position-relative me-1 mt-1">
                 <Link to="/myList">
                   <img src={cart} className='cart' />
-                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{foodItemCount}</span>
+                  <span class="position-absolute top-0 start-70 translate-middle badge rounded-pill bg-danger">{foodItemCount}</span>
                 </Link>
               </button>
               <button type='button' className='btn btn-danger ms-2' onClick={logOut}>Logout</button>

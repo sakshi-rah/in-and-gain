@@ -9,7 +9,8 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
         const listObject = {
             name: title,
             price: price,
-            quantity: quantity
+            quantity: quantity,
+            imgUrl: imgUrl
         }
 
         const existingList = JSON.parse(localStorage.getItem('list')) || []
@@ -37,7 +38,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                     <div className='sweet-card-sub-container'>
                         <h5 className='text-uppercase'>{title}</h5>
                         <p>{description}</p>
-                        <hr/>
+                        <hr />
 
                         <div className='price-qnt-container'>
                             <div className='price text-success'>
@@ -45,15 +46,15 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                             </div>
 
                             <div className='quantity-btn-container '>
-                                <span className='qnt-btn' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
+                                <span className='qnt-btn left' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
                                 <span className='qnt-text'>{quantity}</span>
-                                <span className='qnt-btn' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>
+                                <span className='qnt-btn right' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>
                             </div>
-                        </div>
+                        </div> 
 
                         <div>
                             <button type="button" className='btn-add-to-list btn btn-danger' onClick={addToList}>Add To List</button>
-                            
+
                         </div>
 
                     </div>

@@ -5,11 +5,11 @@
 }
     
 .mithaiimg{
-    width: 730px;
+    width: 650px;
     margin: 5px;
     margin-top: 50px;
     padding: 5px;
-    border-radius: 30px;
+    border-radius: 15px;
 }
 .home-shLogo{
     width: 55px;
@@ -33,7 +33,7 @@
     font-weight: bold;
 }
 .home-page-container{
-    margin: 100px;
+    margin: 80px;
     margin-top: 0%;
     padding: 5px;
 }

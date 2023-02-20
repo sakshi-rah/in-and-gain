@@ -3,7 +3,6 @@ import './MyList.css'
 import swal from "sweetalert"
 import axios from "axios"
 import Navbar from '../../components/Navbar/Navbar'
-import mylistSweet from "../../images/mylist-sweet.webp.crdownload"
 import { myFoodListItems } from '../../util/myList'
 import { currentUser } from '../../util/currentUser'
 
@@ -27,15 +26,19 @@ function MyList() {
       <h1 className='text-center'>MyList</h1>
 
       <div className='mylist-container row'>
-    
+
         {
           myFoodListItems.map((item, index) => {
             return (
               <div className='mylist-card '>
-                <img src={mylistSweet} className='mylistSweet' />
-                <h6>Name: {item.name}</h6>
-                <h6>Quantity: {item.quantity}</h6>
-                <h6>Price: {item.price}₹</h6>
+                <div className='text-center mt-3 mb-3'>
+                  <img src={item.imgUrl} className='mylistSweet text-center' />
+                </div>
+                <div className='ms-2 mb-3'>
+                  <h6>Name: {item.name}</h6>
+                  <h6>Quantity: {item.quantity}</h6>
+                  <h6>Price: {item.price}₹</h6>
+                </div>
               </div>
             )
           })

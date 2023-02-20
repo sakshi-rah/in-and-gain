@@ -56,18 +56,18 @@ function Home() {
             <span className='home-page-para'>Healthy & delicious sweet taste</span>
             <p>These healthy desserts cover all the best sweet trests. providing fresh and <br />
               sweet teste desserts,you can serve and enjoy with dessert stay happy! </p>
-             <Link to='/myOrders'><button className='btn btn-danger' >Order Now</button></Link> 
-             <Link to='/bookTable'><button className='btn btn-danger ms-5' >Book Table</button></Link> 
+            <Link to='/myOrders'><button className='btn btn-danger' >Order Now</button></Link>
+            <Link to='/bookTable'><button className='btn btn-danger ms-5' >Book Table</button></Link>
           </div>
-          
+
         </div>
         <div className='col-md-6 '>
           <img src={mithaiImg} className="mithaiimg" />
         </div>
       </div>
-      <br/><br/>
-      <hr/>
-      <br/><br/>
+      <br />
+      <hr />
+      <br /><br />
       <div className='food-items-result ' id='sweet'>
         <div className='row '>
           {
