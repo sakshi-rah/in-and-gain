@@ -1,51 +1,84 @@
+.card-container{
+  width: 450px;
+  margin-bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .sweet-item-card {
-  margin: 10px;
-  margin-top: 40px;
-  width: 410px;
-  height: 230px;
-  border-radius: 10px;
-  box-shadow: 0 0 15px #494949;
+  width: 430px;
+  height: 200px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px #686868;
+}
+
+.sweet-food-card-body {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  border-radius: 5px;
+}
+
+.food-card-img {
+  width: 230px;
+  height: 200px;
+  object-fit: cover;
+  padding: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.sweet-card-sub-container {
+  padding: 5px;
+  height: 200px;
+
+}
+
+.description{
+  font-size: 12px;
+  text-align: justify;
+  height: 60px;
+  overflow: hidden;
+}
+
+.price-qnt-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0 10px 0;
+  
 }
 
 .price {
   color: #00cc99;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: bold;
-  height: 30px;
+
 }
 
-.food-card-img {
-  width: 200px;
-  height: 250px;
-  object-fit: cover;
-  padding: 0;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
+.quantity-btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 90px;
+  font-size: 14px;
+  height: 25px;
 
-.btn-add-to-list {
-  width: 150px;
-  height: 40px;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  border: none;
-  border-radius: 7px;
-  font-weight: bold;
-  font-size: 17px;
 }
-
 
 .qnt-btn {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: auto;
-  font-size: 25px;
+  justify-content: space-between;
+  margin: 0 10px 0 10px;
+  font-size: 20px;
   color: black;
   cursor: pointer;
-  padding: 5px;
+}
 
+.qnt-text {
+  font-size: 20px;
+  margin: 10px;
 }
 
 .left:hover {
@@ -58,39 +91,15 @@
   font-weight: bold;
 }
 
-.qnt-text {
-  font-size: 25px;
-  margin: 10px;
-}
-
-.price-qnt-container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.quantity-btn-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 90px;
-  height: 50px;
-}
-
-.sweet-food-card-body {
-  display: flex;
-  justify-content: space-between;
-  background-color: whitesmoke;
-  border-radius: 10px;
-}
-
-.sweet-card-sub-container {
-  width: 270px;
-  border-radius: 10px;
-  padding: 10px;
-}
-
-.sweet-card-sub-container p {
-  font-size: 15px;
-
+.btn-add-to-list {
+  width: 160px;
+  height: 30px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+  border-radius:4px;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
 }

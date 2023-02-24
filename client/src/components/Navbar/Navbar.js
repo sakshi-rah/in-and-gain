@@ -14,18 +14,18 @@ function Navbar({ user }) {
   async function logOut() {
     localStorage.removeItem('currentUser')
     await swal({
-        icon: 'success',
-        title: "Success 🎉",
-        text: "Logout Successfully",
-        button: "Ok!"
+      icon: 'success',
+      title: "Success 🎉",
+      text: "Logout Successfully",
+      button: "Ok!"
     })
     window.location.href = '/login'
-}
+  }
   return (
     <div>
       <nav class="navbar navbar-expand-lg bg-light  shadow">
         <div class="container-fluid">
-          <a class="navbar-brand fs-4 logo" href="/"><img src={shLogo} className='shLogo' />  SweetHub</a>
+          <a class="navbar-brand fs-4 logo" href="/"><img src={shLogo} className='shLogo' /> SweetHub</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -34,6 +34,13 @@ function Navbar({ user }) {
               <li class="nav-item">
                 <a class="nav-link active fs-5 " aria-current="page" href='/'>Home</a>
               </li>
+
+              <li class="nav-item">
+                <Link class="nav-link active fs-5" to='/menu'>
+                  Menu
+                </Link>
+              </li>
+
               <li class="nav-item">
                 <a class="nav-link active fs-5 " href="#">About</a>
               </li>
@@ -41,30 +48,9 @@ function Navbar({ user }) {
                 <a class="nav-link active fs-5" href="#">Contact</a>
               </li>
 
-              <li class="nav-item dropdown">
-
-                <Link class="nav-link active dropdown-toggle" to='/' role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Menu
-                </Link>
-
-                <ul class="dropdown-menu">
-                  <li><Link class="dropdown-item" to="">sweet</Link></li>
-                  <li><Link class="dropdown-item" to="/">ladoo</Link></li>
-                  <li><Link class="dropdown-item" to="/">parfi</Link></li>
-                  <li><Link class="dropdown-item" to="/">pedha</Link></li>
-                  <li><Link class="dropdown-item" to="/">milk sweet</Link></li>
-                  <li><hr class="dropdown-divider" /></li>
-                  <li><Link class="dropdown-item" to="/">View More</Link></li>
-                </ul>
-
-              </li>
-
-
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control me-2 " type="search" placeholder="Search" aria-label="Search"
-                value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
-            </form>
+
+
             <form class="d-flex align-items-center">
               <h4 className='me-2 text-dark'> <Link to="/login"> <img src={userPic} className='userpic' /></Link> {user}</h4>
 

@@ -26,27 +26,43 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
         window.location.reload()
     }
 
+    function decrement(){
+
+        let value = 1
+        if(quantity <= value){
+            value = 2
+        }
+        else
+        {
+            value = quantity
+        }
+        setQuantity(value - 1)
+    }
+
     return (
-        <div className='col-md-4 '>
+        <div className='col-lg-4 col-md-6 col-sm-12 card-container'>
             <div className='sweet-item-card'>
 
                 < div className='sweet-food-card-body'>
+
                     <div>
                         <img src={imgUrl} alt='' className='food-card-img' />
                     </div>
 
                     <div className='sweet-card-sub-container'>
-                        <h5 className='text-uppercase'>{title}</h5>
-                        <p>{description}</p>
+
+                        <h6 className='text-uppercase fw-bold'>{title}</h6>
+                        <p className='description'>{description}</p>
                         <hr />
 
                         <div className='price-qnt-container'>
+
                             <div className='price text-success'>
                                 <span> Price : {price}₹</span>
                             </div>
 
                             <div className='quantity-btn-container '>
-                                <span className='qnt-btn left' onClick={(e) => { setQuantity(quantity - 1) }}>{"<"}</span>
+                                <span className='qnt-btn left' onClick={decrement}>{"<"}</span>
                                 <span className='qnt-text'>{quantity}</span>
                                 <span className='qnt-btn right' onClick={(e) => { setQuantity(quantity + 1) }}>{">"}</span>
                             </div>
@@ -59,7 +75,6 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
 
                     </div>
                 </div>
-
 
             </div>
 
