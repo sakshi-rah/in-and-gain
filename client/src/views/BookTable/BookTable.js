@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import swal from 'sweetalert'
 import { currentUser } from './../../util/currentUser'
+import { loginRequired } from '../../util/loginRequired'
 import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"
 import table from "../../images/table-img.png"
@@ -14,21 +15,49 @@ function BookTable() {
         const fetchTables = async () => {
             const response = await axios.get("/availableTables")
             console.log(response.data.data);
-            localStorage.setItem('table', JSON.stringify(response.data.data))
             setAvailableTables(response.data.data)
         }
         fetchTables()
+        loginRequired()
     }, [])
 
-    async function bookTable() {
-        console.log('Table Booked');
+    async function bookTable(tableNumber) {
+        console.log(tableNumber);
         const response = await axios.post('/bookTable', {
-            tableNumber: localStorage.getItem("table"),
+            tableNumber: tableNumber,
             userID: currentUser._id
         })
-        localStorage.setItem('')
-        console.log(response.data.success);
+
+        if (response.data.success) {
+            await swal({
+                icon: 'success',
+                title: "Booked Table",
+                text: response.data.message,
+            })
+            localStorage.setItem('bookedTable', JSON.stringify(response.data.data))
+            window.location.reload()
+        }
+        else {
+            await swal({
+                icon: 'error',
+                title: "Choose Another Table !",
+                text: response.data.message,
+            })
+            window.location.reload()
+        }
     }
+
+    async function unbookTable(tableNumber) {
+        const response = await axios.post('/unBookTable', { tableNumber: tableNumber })
+        await swal({
+            icon: 'success',
+            title: "Unbooked Table",
+            text: response.data.message,
+        })
+        localStorage.removeItem('bookedTable')
+        window.location.reload()
+    }
+
 
     return (
         <div className='tables row'>
@@ -38,13 +67,14 @@ function BookTable() {
             <p className='text-center fs-1'>Available Tables</p>
 
             {
-            availabletables &&
+                availabletables &&
                 availabletables?.map((availabletable) => {
                     return (
-                        <div className='col-md-4'>
-                            <p className='available-table'> 🍽 Table : {availabletable.tableNumber}
+                        <div className='col-md-6 col-lg-3 col-sm-6 col-12'>
+                            <p className='available-table'>Table : {availabletable.tableNumber}
                                 <img className='table-img' alt='' src={table} />
-                                <button type='button' className='btn btn-danger btn-table' onClick={bookTable}>Book Table</button>
+                                <button type='button' className='btn btn-danger btn-table' onClick={() => { bookTable(availabletable.tableNumber) }}>Book Table</button>
+                                <button type='button' className='btn border border-2 border-danger btn-table text-danger' onClick={() => { unbookTable(availabletable.tableNumber) }}>UnBook Table</button>
                             </p>
                             <br />
                         </div>

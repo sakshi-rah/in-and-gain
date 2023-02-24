@@ -120,6 +120,7 @@ app.post('/createFoodItems', async (req, res) => {
         data: saveFoodItem
     })
 })
+
 //search food items api route by category
 app.get('/foodItemByCategory', async (req, res) => {
     const { category } = req.query;
@@ -149,6 +150,7 @@ app.get('/foodItemByTitle', async (req, res) => {
         data: foodItems
     })
 })
+
 //search all food api route
 app.get('/allFoodItems', async (req, res) => {
 
@@ -187,7 +189,6 @@ app.post('/createTable', async (req, res) => {
 })
 
 //booktable api route
-
 app.post('/bookTable', async (req, res) => {
     const { tableNumber, userId } = req.body;
 
@@ -200,7 +201,7 @@ app.post('/bookTable', async (req, res) => {
     }
     if (existingTable) {
         existingTable.booked = true;
-        existingTable.userId = userId;
+        existingTable.bookedBy = userId;
         await existingTable.save();
     }
 
@@ -228,9 +229,10 @@ app.post('/unBookTable', async (req, res) => {
         data: existingTable
     })
 })
+
 //availabletables api route
 app.get('/availableTables', async (req, res) => {
-    const availableTables = await SeatBook.find({ booked: false });
+    const availableTables = await SeatBook.find();
 
     res.json({
         success: true,
@@ -238,6 +240,7 @@ app.get('/availableTables', async (req, res) => {
         data: availableTables
     })
 })
+
 // orderfooditems api route
 app.post('/orderFoodItems', async (req, res) => {
     const { userId, tableNumber, items } = req.body;
@@ -273,6 +276,7 @@ app.get('/order', async (req, res) => {
         data: order
     })
 })
+
 //ordersby userId api route
 app.get('/ordersByUserId', async (req, res) => {
     const { userId } = req.body;
@@ -285,6 +289,7 @@ app.get('/ordersByUserId', async (req, res) => {
         data: orders
     })
 })
+
 app.listen(PORT, () => {
     console.log(`server started running on PORT ${PORT}`);
 })

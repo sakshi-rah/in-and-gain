@@ -42,6 +42,13 @@ function Navbar({ user }) {
               </li>
 
               <li class="nav-item">
+                <Link class="nav-link active fs-5" to='/bookTable'>
+                  Table
+                </Link>
+              </li>
+
+
+              <li class="nav-item">
                 <a class="nav-link active fs-5 " href="#">About</a>
               </li>
               <li class="nav-item">

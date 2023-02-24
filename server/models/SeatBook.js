@@ -1,4 +1,4 @@
-import {model, Model,Schema} from "mongoose";
+import {model,Schema} from "mongoose";
 
 const SeatBookSchema = new Schema({
     tableNumber : Number,
@@ -9,6 +9,6 @@ const SeatBookSchema = new Schema({
     }
 })
 
-const Table = model('Table',SeatBookSchema);
+const Table = model('Table', SeatBookSchema);
 
 export default Table 
