@@ -5,25 +5,16 @@
     box-sizing: border-box;
 }
 
-.signup-form-container {
-    margin-top: 40px;
-    margin-left: 80px;
-    width: 500px;
-    height: 500px;
-
-}
-
 .signup-first-container {
-    width: 580px;
-    height: 600px;
+    width: 450px;
+    height: 500px;
     margin: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
     background-color: beige;
     box-shadow: 0 2px 4px 0 gray;
-    border-radius: 10px;
+    border-radius: 8px;
 }
 
 .profile-pic-container {
@@ -34,18 +25,18 @@
 }
 
 .profile-pic {
-    width: 60px;
+    width: 50px;
 
 }
 
 .signup-form-input {
-    width: 450px;
+    width: 425px;
+    height: 35px;
     border: none;
-    border-radius: 5px;
+    border-radius: 3px;
     cursor: pointer;
     background-color: #f5d5e0;
     padding: 5px;
-    border-bottom: 1px solid black;
 }
 
 .signup-form-input:hover {
@@ -53,23 +44,27 @@
 }
 
 .signup-form-item {
-    margin-top: 15px;
-    margin-left: 50px;
-    font-size: 20px;
-    border: 1px solide red;
+    margin: 10px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.btn-box{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
 }
 
 .create-btn {
-    width: 450px;
-    margin-left: 50px;
-    margin-top: 30px;
-    border: none;
+    width: 300px;
     border-radius: 5px;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 .para-signup {
-    display: block;
+    text-align: center;
+    margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -77,9 +72,9 @@
 /*right side container css */
 
 .signup-right-image {
-    width: 600px;
-    height: 600px;
-    margin: 50px;
+    width: 450px;
+    height: 500px;
+    margin: 30px;
     display: block;
     margin-left: auto;
     margin-right: auto;

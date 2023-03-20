@@ -54,10 +54,11 @@ function Login() {
             <Navbar />
             <div className='row'>
 
-                <div class='col-md-6  '>
+                <div class='col-12 col-sm-12 col-md-12 col-lg-6'>
 
                     <form>
                         <div className='first-login-container '>
+                            
                             <h1 className='text-center login-heading'>Login</h1>
                             <div className='profile-pic-container'>
                                 <img src={profilePic} className='profile-pic' alt='' />

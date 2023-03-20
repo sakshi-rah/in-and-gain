@@ -57,7 +57,7 @@ function Singup() {
             <Navbar />
             <div className='row'>
 
-                <div className='col-md-6'>
+                <div className='col-12 col-sm-12 col-md-12 col-lg-6'>
 
                     <form>
                         <div className='signup-first-container'>
@@ -87,8 +87,9 @@ function Singup() {
                             </div>
 
                             <div className='btn-box'>
-                                <button type='button' className='create-btn btn btn-danger' onClick={signupUser}> Create</button>
+                                <button type='button' className='create-btn btn btn-danger' onClick={signupUser}>Create Account</button>
                             </div>
+
                             <p className='para-signup '>
                                 Have already an account?  <Link to="/login"><b>Login here</b>
                                 </Link></p>

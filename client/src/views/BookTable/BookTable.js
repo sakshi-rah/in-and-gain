@@ -74,7 +74,7 @@ function BookTable() {
                             <p className='available-table'>Table : {availabletable.tableNumber}
                                 <img className='table-img' alt='' src={table} />
                                 <button type='button' className='btn btn-danger btn-table' onClick={() => { bookTable(availabletable.tableNumber) }}>Book Table</button>
-                                <button type='button' className='btn border border-2 border-danger btn-table text-danger' onClick={() => { unbookTable(availabletable.tableNumber) }}>UnBook Table</button>
+                                <button type='button' className='btn btn-outline-danger btn-table' onClick={() => { unbookTable(availabletable.tableNumber) }}>UnBook Table</button>
                             </p>
                             <br />
                         </div>

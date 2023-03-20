@@ -1,4 +1,5 @@
 import express from "express"
+import path from 'path';
 import mongoose from "mongoose";
 import dotenv, { config } from "dotenv";
 import User from "./models/User.js";
@@ -6,7 +7,7 @@ import FoodItem from "./models/FoodItem.js"
 import SeatBook from "./models/SeatBook.js";
 import Order from "./models/Order.js";
 dotenv.config()
-
+const _dirname = path.resolve();
 
 const app = express();
 app.use(express.json());
@@ -289,6 +290,13 @@ app.get('/ordersByUserId', async (req, res) => {
         data: orders
     })
 })
+
+//Send Request to frontend
+app.use(express.static(path.join(_dirname, '..', 'client', 'build')));
+
+app.get('*', (req, res) => {
+    res.sendFile(path.join(_dirname, '..', 'client', 'build', 'index.html'));
+});
 
 app.listen(PORT, () => {
     console.log(`server started running on PORT ${PORT}`);
