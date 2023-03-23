@@ -6,7 +6,6 @@ import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { currentUser } from './../../util/currentUser'
 import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
-import mithaiImg from "./../../images/mithai.jpg"
 import shLogo from "./../../images/shlogo.png"
 
 
