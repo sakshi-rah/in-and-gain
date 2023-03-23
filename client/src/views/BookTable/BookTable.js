@@ -5,7 +5,7 @@ import { currentUser } from './../../util/currentUser'
 import { loginRequired } from '../../util/loginRequired'
 import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"
-import table from "../../images/table-img.png"
+import table from "../../assets/table-img.png"
 
 function BookTable() {
 

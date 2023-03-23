@@ -3,9 +3,9 @@ import "./Navbar.css"
 import { myFoodListCount } from '../../util/myList'
 import { Link } from 'react-router-dom'
 import swal from 'sweetalert'
-import userPic from "./../../images/userPic.png"
-import shLogo from "./../../images/shlogo.png"
-import cart from "./../../images/cart.png"
+import userPic from "./../../assets/userPic.png"
+import shLogo from "./../../assets/shlogo.png"
+import cart from "./../../assets/cart.png"
 
 function Navbar({ user }) {
   const [foodItemCount, setFoodItemCount] = useState(myFoodListCount)

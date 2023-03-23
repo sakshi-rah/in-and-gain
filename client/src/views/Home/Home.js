@@ -6,7 +6,8 @@ import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { currentUser } from './../../util/currentUser'
 import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
-import shLogo from "./../../images/shlogo.png"
+import mithaiImg from "./../../assets/mithai.jpg"
+import shLogo from "./../../assets/shlogo.png"
 
 
 function Home() {

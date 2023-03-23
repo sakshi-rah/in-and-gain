@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import swal from 'sweetalert'
 import "./Signup.css"
-import signupImg from "./../../images/signup-page-pic.png"
-import profilePic from "./../../images/profile-pic.png"
+import signupImg from "./../../assets/signup-page-pic.png"
+import profilePic from "./../../assets/profile-pic.png"
 import { currentUser } from '../../util/currentUser'
 import { Link } from 'react-router-dom'
 import Navbar from "./../../components/Navbar/Navbar"
