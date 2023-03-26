@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from "axios"
 import swal from 'sweetalert'
-import { currentUser } from './../../util/currentUser'
+import { currentUser } from './../../util/currentUser.js'
 import { loginRequired } from '../../util/loginRequired'
 import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"

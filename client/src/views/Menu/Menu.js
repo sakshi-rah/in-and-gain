@@ -3,7 +3,7 @@ import axios from "axios"
 import Navbar from '../../components/Navbar/Navbar'
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { loginRequired } from '../../util/loginRequired'
-import { currentUser } from '../../util/currentUser'
+import { currentUser } from '../../util/currentUser.js'
 import "./Menu.css"
 
 
