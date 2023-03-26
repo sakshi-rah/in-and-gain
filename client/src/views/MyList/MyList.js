@@ -4,7 +4,7 @@ import swal from "sweetalert"
 import axios from "axios"
 import Navbar from '../../components/Navbar/Navbar'
 import { myFoodListItems } from '../../util/myList'
-import { currentUser } from '../../util/currentUser.js'
+import { currentUser } from './../../util/currentUser'
 
 function MyList() {
   async function placeFoodOrder() {

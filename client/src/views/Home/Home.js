@@ -3,7 +3,7 @@ import axios from "axios"
 import { Link } from 'react-router-dom'
 import "./Home.css"
 import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
-import { currentUser } from './../../util/currentUser.js'
+import { currentUser } from './../../util/currentUser'
 import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
 import mithaiImg from "./../../assets/mithai.jpg"
