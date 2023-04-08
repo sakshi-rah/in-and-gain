@@ -37,12 +37,10 @@
 
 .search-input:hover,
 .search-input:focus {
-    padding: 12px ;
+    padding: 12px 0;
     outline: 0;
     border: 1px solid transparent;
-    border-right: 1px solid #575756;
-    border-left: 1px solid #575756;
     border-bottom: 1px solid #575756;
-    border-radius: 10%;
+    border-radius: 0;
     background-position: 100% center;
 }

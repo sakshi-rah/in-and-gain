@@ -50,7 +50,7 @@ function Menu() {
                 <input class="search-input" type="search" placeholder="Search" aria-label="Search"
                     value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
             </div>
-
+            
             <div className='food-items-result'>
                 <div className='row food-items-row'>
                     {
