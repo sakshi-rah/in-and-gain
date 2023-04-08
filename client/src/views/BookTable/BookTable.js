@@ -6,7 +6,7 @@ import { loginRequired } from '../../util/loginRequired'
 import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"
 import table from "../../assets/table-img.png"
-
+import Footer from "../../components/Footer/Footer"
 
 function BookTable() {
 
@@ -82,6 +82,8 @@ function BookTable() {
                     )
                 })
             }
+            
+            <Footer/>
         </div>
     )
 }

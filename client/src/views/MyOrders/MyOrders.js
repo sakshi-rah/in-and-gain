@@ -4,6 +4,7 @@ import { loginRequired } from './../../util/loginRequired'
 import Navbar from '../../components/Navbar/Navbar'
 import { currentUser } from '../../util/currentUser'
 import "./MyOrders.css"
+import Footer from "../../components/Footer/Footer"
 
 function MyOrders() {
 
@@ -15,6 +16,8 @@ function MyOrders() {
     <div>
       <Navbar user={currentUser?.name} />
       <h1>My Orders</h1>
+
+      <Footer/>
     </div>
   )
 }

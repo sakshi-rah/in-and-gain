@@ -5,6 +5,7 @@ import axios from "axios"
 import Navbar from '../../components/Navbar/Navbar'
 import { myFoodListItems } from '../../util/myList'
 import { currentUser } from './../../util/currentUser'
+import Footer from "../../components/Footer/Footer"
 
 function MyList() {
   async function placeFoodOrder() {
@@ -45,6 +46,8 @@ function MyList() {
         }
       </div>
       <button className='btn btn-danger confirm-btn' onClick={placeFoodOrder}>Confirm Order</button>
+
+      <Footer/>
     </div>
   )
 }

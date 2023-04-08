@@ -5,6 +5,7 @@ import FoodItemCard from "./../../components/FoodItemCard/FoodItemCard"
 import { loginRequired } from '../../util/loginRequired'
 import { currentUser } from './../../util/currentUser'
 import "./Menu.css"
+import Footer from "../../components/Footer/Footer"
 
 
 function Menu() {
@@ -50,7 +51,7 @@ function Menu() {
                 <input class="search-input" type="search" placeholder="Search" aria-label="Search"
                     value={searchText} onChange={(e) => { setSearchText(e.target.value) }} />
             </div>
-            
+
             <div className='food-items-result'>
                 <div className='row food-items-row'>
                     {
@@ -62,6 +63,7 @@ function Menu() {
                 </div>
             </div>
 
+            <Footer />
         </div>
     )
 }

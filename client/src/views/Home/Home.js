@@ -8,6 +8,7 @@ import { loginRequired } from "./../../util/loginRequired"
 import Navbar from "./../../components/Navbar/Navbar"
 import mithaiImg from "./../../assets/mithai.jpg"
 import shLogo from "./../../assets/shlogo.png"
+import Contact from '../Contact/Contact'
 import Footer from '../../components/Footer/Footer'
 
 
@@ -51,6 +52,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <Contact/>
       <Footer />
     </div>
   )
