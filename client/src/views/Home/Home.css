@@ -1,38 +1,50 @@
-*{
+* {
     margin: 0%;
     padding: 0%;
     box-sizing: border-box;
 }
-    
-.mithaiimg{
-    width: 650px;
-    margin: 5px;
-    margin-top: 50px;
-    padding: 5px;
-    border-radius: 15px;
-}
-.home-shLogo{
-    width: 55px;
-    border-radius: 50%;
-    margin: 10px;
+.left-container{
+    width: 700px;
+
 }
 
-.sweethub-container{
+
+.right-container{
+    width: 650px;
+    display: flex;
+    align-items: center;
+}
+
+.mithaiimg {
+    border-radius: 8px;
+    margin: 0 auto 0 auto;
+}
+
+.home-shLogo {
+    width: 55px;
+    border-radius: 50%;
+    margin: 0%;
+    padding: 0;
+}
+
+.sweethub-container {
+    margin-left: auto;
+    margin-right: auto;
     width: 400px;
     display: block;
     color: rgb(190, 47, 47);
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 70px;
+    text-align: center;
     font-size: 50px;
     font-weight: bold;
-    
+
 }
-.home-page-para{
+
+.home-page-para {
     font-size: 40px;
     font-weight: bold;
 }
-.home-page-container{
+
+.home-page-container {
     margin: 80px;
     margin-top: 0%;
     padding: 5px;
