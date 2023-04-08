@@ -62,7 +62,7 @@ function BookTable() {
     return (
         <div className='tables row'>
 
-            <Navbar />
+            <Navbar user={currentUser?.name} />
 
             <p className='text-center fs-1'>Available Tables</p>
 

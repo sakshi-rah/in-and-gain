@@ -36,7 +36,7 @@ function Home() {
             </p>
 
             <Link to='/myOrders'><button className='btn btn-danger' >Order Now</button></Link>
-            <Link to='/bookTable'><button className='btn btn-outline-danger ms-5 ' >Book Table</button></Link>
+            <Link to='/bookTable'><button className='btn btn-outline-danger ms-5 '>Book Table</button></Link>
 
           </div>
 

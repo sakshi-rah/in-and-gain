@@ -59,7 +59,7 @@ function Navbar({ user }) {
 
 
             <form class="d-flex align-items-center">
-              <h4 className='me-2 text-dark'> <Link to="/login"> <img src={userPic} className='userpic' /></Link> {user}</h4>
+              <b className='me-2 text-dark'> <Link to="/login"> <img src={userPic} className='userpic me-2' /></Link>{user}</b>
 
               <button type="button" class="btn position-relative me-1 mt-1">
                 <Link to="/myList">

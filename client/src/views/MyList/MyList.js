@@ -22,7 +22,7 @@ function MyList() {
 
   return (
     <div>
-      <Navbar />
+      <Navbar user={currentUser?.name} />
       <h1 className='text-center'>MyList</h1>
 
       <div className='mylist-container row'>
