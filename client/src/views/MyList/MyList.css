@@ -20,3 +20,18 @@
     height: 200px;
     border-radius: 5px;
 }
+.dlt-plate{
+    width: fit-content;
+    height: fit-content;
+    padding: 2px;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    color: rgb(179, 32, 32);
+}
+
+.dlt-plate:hover{
+    color: #454545;
+    height: max-content;
+    border-radius: 5px;
+}

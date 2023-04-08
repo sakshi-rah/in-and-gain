@@ -1,0 +1,1 @@
+export const currentList = JSON.parse(localStorage.getItem('list')) || null;

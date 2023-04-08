@@ -58,7 +58,7 @@ function FoodItemCard({ imgUrl, price, description, title, category }) {
                         <div className='price-qnt-container'>
 
                             <div className='price text-success'>
-                                <span> Price : {price}₹</span>
+                                <span> Price : ₹ {price}</span>
                             </div>
 
                             <div className='quantity-btn-container '>

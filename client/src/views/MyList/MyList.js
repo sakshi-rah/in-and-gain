@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './MyList.css'
 import swal from "sweetalert"
 import axios from "axios"
@@ -6,8 +6,30 @@ import Navbar from '../../components/Navbar/Navbar'
 import { myFoodListItems } from '../../util/myList'
 import { currentUser } from './../../util/currentUser'
 import Footer from "../../components/Footer/Footer"
+import {loginRequired} from '../../util/loginRequired'
+import { itemsRequired } from '../../util/itemsRequired'
+import { tableRequired } from '../../util/tableRequired'
 
 function MyList() {
+
+  useEffect(() => {
+    itemsRequired()
+    loginRequired()
+    tableRequired()
+  }, [])
+
+  async function deletePlate(index) {
+    myFoodListItems.splice(index, 1)
+    localStorage.setItem('plate', JSON.stringify(myFoodListItems))
+    await swal({
+      icon: 'success',
+      title: "Item Removed",
+      text: "Item Removed From Plate",
+      button: "Ok"
+    })
+    window.location.reload()
+  }
+
   async function placeFoodOrder() {
     const response = await axios.post('/orderFoodItems', {
       userId: currentUser._id,
@@ -20,6 +42,15 @@ function MyList() {
       window.location.href = '/'
     }
   }
+
+  async function clearPlate() {
+    localStorage.removeItem("plate")
+    await swal({
+        icon: 'success',
+        title: "Plate Cleared !",
+    })
+    window.location.href = "/menu";
+}
 
   return (
     <div>
@@ -38,7 +69,7 @@ function MyList() {
                 <div className='ms-2 mb-3'>
                   <h6>Name: {item.name}</h6>
                   <h6>Quantity: {item.quantity}</h6>
-                  <h6>Price: {item.price}₹</h6>
+                  <h6>Price: ₹ {item.price}</h6>
                 </div>
               </div>
             )
@@ -47,7 +78,16 @@ function MyList() {
       </div>
       <button className='btn btn-danger confirm-btn' onClick={placeFoodOrder}>Confirm Order</button>
 
-      <Footer/>
+      <div className='dlt-plate'>
+        <i class="fa-solid fa-trash" onClick={() => deletePlate(index)}></i>
+      </div>
+
+      <div className='confirm-btn'>
+        <button className='btn button' onClick={placeFoodOrder}>PLACE ORDER</button>
+        <button className='btn button-clr' onClick={clearPlate}>CLEAR PLATE</button>
+      </div>
+
+      <Footer />
     </div>
   )
 }
