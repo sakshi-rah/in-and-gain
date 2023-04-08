@@ -7,6 +7,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import "./BookTable.css"
 import table from "../../assets/table-img.png"
 
+
 function BookTable() {
 
     const [availabletables, setAvailableTables] = useState([])
