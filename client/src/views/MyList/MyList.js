@@ -18,13 +18,13 @@ function MyList() {
     tableRequired()
   }, [])
 
-  async function deletePlate(index) {
+  async function deleteList(index) {
     myFoodListItems.splice(index, 1)
-    localStorage.setItem('plate', JSON.stringify(myFoodListItems))
+    localStorage.setItem('list', JSON.stringify(myFoodListItems))
     await swal({
       icon: 'success',
       title: "Item Removed",
-      text: "Item Removed From Plate",
+      text: "Item Removed From List",
       button: "Ok"
     })
     window.location.reload()
@@ -43,8 +43,8 @@ function MyList() {
     }
   }
 
-  async function clearPlate() {
-    localStorage.removeItem("plate")
+  async function clearList() {
+    localStorage.removeItem("list")
     await swal({
         icon: 'success',
         title: "Plate Cleared !",
@@ -78,13 +78,13 @@ function MyList() {
       </div>
       <button className='btn btn-danger confirm-btn' onClick={placeFoodOrder}>Confirm Order</button>
 
-      <div className='dlt-plate'>
-        <i class="fa-solid fa-trash" onClick={() => deletePlate(index)}></i>
+      <div className='dlt-list'>
+        <i class="fa-solid fa-trash" onClick={() => deleteList()}></i>
       </div>
 
       <div className='confirm-btn'>
-        <button className='btn button' onClick={placeFoodOrder}>PLACE ORDER</button>
-        <button className='btn button-clr' onClick={clearPlate}>CLEAR PLATE</button>
+        <button className='btn btn-danger' onClick={placeFoodOrder}>Book Order</button>
+        <button className='btn btn-outline-danger' onClick={clearList}>Clear List</button>
       </div>
 
       <Footer />
